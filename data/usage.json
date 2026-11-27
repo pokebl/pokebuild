@@ -1,397 +1,1931 @@
 {
  "format": "singles",
  "regulation": "M-C",
- "season": "M-8",
- "source": "GameWith 使用率ランキング（順位のみ転記）",
- "source_url": "https://gamewith.jp/pokemon-champions/555373",
- "period": "シーズンM-8（集計日 2026-11-13）",
- "updated_at": "2026-11-13",
- "note": "使用率%は出典で非公開のため null。数値の推測・補完は行っていない。ダブル(VGC)のデータは一切含まない。",
+ "season": "Smogon 2026-10",
+ "source": "Smogon公式統計（Pokémon Showdown）Champions BSS Reg M-C",
+ "source_url": "https://www.smogon.com/stats/2026-10/chaos/gen9championsbssregmc-1630.json",
+ "source_stats_month": "2026-10",
+ "period": "2026-10 集計分（cutoff 1630、対戦数 87848）",
+ "updated_at": "2026-11-27",
+ "note": "Showdownラダーの集計であり、ゲーム内ランクバトルの使用率とは母集団が異なる。使用率%はchaos JSONの usage を百分率化した実測値。ダブル(VGC)のデータは含まない。",
  "entries": [
   {
-   "name": "ガブリアス",
-   "rank": 1,
-   "usage_pct": null
-  },
-  {
    "name": "アシレーヌ",
-   "rank": 2,
-   "usage_pct": null
+   "rank": 1,
+   "usage_pct": 34.06,
+   "name_en": "Primarina",
+   "slug": "primarina"
   },
   {
-   "name": "カバルドン",
+   "name": "サーフゴー",
+   "rank": 2,
+   "usage_pct": 29.26,
+   "name_en": "Gholdengo",
+   "slug": "gholdengo"
+  },
+  {
+   "name": "ガブリアス",
    "rank": 3,
-   "usage_pct": null
+   "usage_pct": 29.21,
+   "name_en": "Garchomp",
+   "slug": "garchomp"
   },
   {
    "name": "ブリジュラス",
    "rank": 4,
-   "usage_pct": null
+   "usage_pct": 29.19,
+   "name_en": "Archaludon",
+   "slug": "archaludon"
   },
   {
-   "name": "ルカリオ",
+   "name": "カバルドン",
    "rank": 5,
-   "usage_pct": null
+   "usage_pct": 27.16,
+   "name_en": "Hippowdon",
+   "slug": "hippowdon"
+  },
+  {
+   "name": "メガボーマンダ",
+   "rank": 6,
+   "usage_pct": 21.11,
+   "name_en": "Salamence-Mega",
+   "slug": "salamence-mega"
   },
   {
    "name": "ミミッキュ",
-   "rank": 6,
-   "usage_pct": null
-  },
-  {
-   "name": "グソクムシャ",
    "rank": 7,
-   "usage_pct": null
+   "usage_pct": 19.12,
+   "name_en": "Mimikyu",
+   "slug": "mimikyu-disguised"
   },
   {
-   "name": "リザードン",
+   "name": "メガグソクムシャ",
    "rank": 8,
-   "usage_pct": null
+   "usage_pct": 18.75,
+   "name_en": "Golisopod-Mega",
+   "slug": "golisopod-mega"
   },
   {
    "name": "イダイトウ（オス）",
    "rank": 9,
-   "usage_pct": null
-  },
-  {
-   "name": "ボーマンダ",
-   "rank": 10,
-   "usage_pct": null
-  },
-  {
-   "name": "サーフゴー",
-   "rank": 11,
-   "usage_pct": null
-  },
-  {
-   "name": "マスカーニャ",
-   "rank": 12,
-   "usage_pct": null
+   "usage_pct": 14.8,
+   "name_en": "Basculegion",
+   "slug": "basculegion-male"
   },
   {
    "name": "アーマーガア",
-   "rank": 13,
-   "usage_pct": null
+   "rank": 10,
+   "usage_pct": 13.21,
+   "name_en": "Corviknight",
+   "slug": "corviknight"
   },
   {
-   "name": "カイリュー",
-   "rank": 14,
-   "usage_pct": null
-  },
-  {
-   "name": "ゴリランダー",
-   "rank": 15,
-   "usage_pct": null
-  },
-  {
-   "name": "メタグロス",
-   "rank": 16,
-   "usage_pct": null
+   "name": "メガフラエッテ",
+   "rank": 11,
+   "usage_pct": 13.2,
+   "name_en": "Floette-Mega",
+   "slug": "floette-mega"
   },
   {
    "name": "イエッサン（オス）",
+   "rank": 12,
+   "usage_pct": 12.91,
+   "name_en": "Indeedee",
+   "slug": "indeedee-male"
+  },
+  {
+   "name": "メガガブリアスZ",
+   "rank": 13,
+   "usage_pct": 12.83,
+   "name_en": "Garchomp-Mega-Z",
+   "slug": "garchomp-mega-z"
+  },
+  {
+   "name": "メガルカリオZ",
+   "rank": 14,
+   "usage_pct": 12.31,
+   "name_en": "Lucario-Mega-Z",
+   "slug": "lucario-mega-z"
+  },
+  {
+   "name": "マスカーニャ",
+   "rank": 15,
+   "usage_pct": 11.1,
+   "name_en": "Meowscarada",
+   "slug": "meowscarada"
+  },
+  {
+   "name": "メガメタグロス",
+   "rank": 16,
+   "usage_pct": 10.81,
+   "name_en": "Metagross-Mega",
+   "slug": "metagross-mega"
+  },
+  {
+   "name": "メガカイリュー",
    "rank": 17,
-   "usage_pct": null
+   "usage_pct": 10.06,
+   "name_en": "Dragonite-Mega",
+   "slug": "dragonite-mega"
   },
   {
    "name": "セグレイブ",
    "rank": 18,
-   "usage_pct": null
+   "usage_pct": 9.93,
+   "name_en": "Baxcalibur",
+   "slug": "baxcalibur"
   },
   {
-   "name": "キラフロル",
+   "name": "ゴリランダー",
    "rank": 19,
-   "usage_pct": null
-  },
-  {
-   "name": "ギャラドス",
-   "rank": 20,
-   "usage_pct": null
-  },
-  {
-   "name": "エースバーン",
-   "rank": 21,
-   "usage_pct": null
-  },
-  {
-   "name": "ブラッキー",
-   "rank": 22,
-   "usage_pct": null
-  },
-  {
-   "name": "ゲンガー",
-   "rank": 23,
-   "usage_pct": null
-  },
-  {
-   "name": "ヒートロトム",
-   "rank": 24,
-   "usage_pct": null
-  },
-  {
-   "name": "ゲッコウガ",
-   "rank": 25,
-   "usage_pct": null
-  },
-  {
-   "name": "ウォッシュロトム",
-   "rank": 26,
-   "usage_pct": null
-  },
-  {
-   "name": "ドドゲザン",
-   "rank": 27,
-   "usage_pct": null
-  },
-  {
-   "name": "バシャーモ",
-   "rank": 28,
-   "usage_pct": null
-  },
-  {
-   "name": "ライチュウ",
-   "rank": 29,
-   "usage_pct": null
-  },
-  {
-   "name": "フラエッテ（えいえんのはな）",
-   "rank": 30,
-   "usage_pct": null
-  },
-  {
-   "name": "ラグラージ",
-   "rank": 31,
-   "usage_pct": null
-  },
-  {
-   "name": "パーモット",
-   "rank": 32,
-   "usage_pct": null
-  },
-  {
-   "name": "バンギラス",
-   "rank": 33,
-   "usage_pct": null
-  },
-  {
-   "name": "ウルガモス",
-   "rank": 34,
-   "usage_pct": null
+   "usage_pct": 9.52,
+   "name_en": "Rillaboom",
+   "slug": "rillaboom"
   },
   {
    "name": "ギルガルド",
-   "rank": 35,
-   "usage_pct": null
+   "rank": 20,
+   "usage_pct": 8.43,
+   "name_en": "Aegislash",
+   "slug": "aegislash-shield"
   },
   {
-   "name": "オオニューラ",
-   "rank": 36,
-   "usage_pct": null
+   "name": "メガカメックス",
+   "rank": 21,
+   "usage_pct": 7.79,
+   "name_en": "Blastoise-Mega",
+   "slug": "blastoise-mega"
   },
   {
-   "name": "アローラキュウコン",
-   "rank": 37,
-   "usage_pct": null
-  },
-  {
-   "name": "ピクシー",
-   "rank": 38,
-   "usage_pct": null
+   "name": "メガリザードンY",
+   "rank": 22,
+   "usage_pct": 7.64,
+   "name_en": "Charizard-Mega-Y",
+   "slug": "charizard-mega-y"
   },
   {
    "name": "ヒスイダイケンキ",
-   "rank": 39,
-   "usage_pct": null
+   "rank": 23,
+   "usage_pct": 7.63,
+   "name_en": "Samurott-Hisui",
+   "slug": "samurott-hisui"
   },
   {
-   "name": "サザンドラ",
-   "rank": 40,
-   "usage_pct": null
+   "name": "アローラキュウコン",
+   "rank": 24,
+   "usage_pct": 7.24,
+   "name_en": "Ninetales-Alola",
+   "slug": "ninetales-alola"
   },
   {
-   "name": "ドヒドイデ",
-   "rank": 41,
-   "usage_pct": null
+   "name": "ドドゲザン",
+   "rank": 25,
+   "usage_pct": 7.07,
+   "name_en": "Kingambit",
+   "slug": "kingambit"
   },
   {
-   "name": "カメックス",
-   "rank": 42,
-   "usage_pct": null
+   "name": "オオニューラ",
+   "rank": 26,
+   "usage_pct": 6.81,
+   "name_en": "Sneasler",
+   "slug": "sneasler"
   },
   {
-   "name": "ハッサム",
-   "rank": 43,
-   "usage_pct": null
+   "name": "ブラッキー",
+   "rank": 27,
+   "usage_pct": 6.43,
+   "name_en": "Umbreon",
+   "slug": "umbreon"
   },
   {
-   "name": "ムクホーク",
-   "rank": 44,
-   "usage_pct": null
+   "name": "メガゲンガー",
+   "rank": 28,
+   "usage_pct": 6.35,
+   "name_en": "Gengar-Mega",
+   "slug": "gengar-mega"
   },
   {
-   "name": "ガラルヤドキング",
-   "rank": 45,
-   "usage_pct": null
+   "name": "メガギャラドス",
+   "rank": 29,
+   "usage_pct": 5.69,
+   "name_en": "Gyarados-Mega",
+   "slug": "gyarados-mega"
   },
   {
-   "name": "ラウドボーン",
-   "rank": 46,
-   "usage_pct": null
+   "name": "キラフロル",
+   "rank": 30,
+   "usage_pct": 5.64,
+   "name_en": "Glimmora",
+   "slug": "glimmora"
   },
   {
-   "name": "スターミー",
-   "rank": 47,
-   "usage_pct": null
-  },
-  {
-   "name": "ソウブレイズ",
-   "rank": 48,
-   "usage_pct": null
-  },
-  {
-   "name": "スコヴィラン",
-   "rank": 49,
-   "usage_pct": null
-  },
-  {
-   "name": "マフォクシー",
-   "rank": 50,
-   "usage_pct": null
+   "name": "メガバシャーモ",
+   "rank": 31,
+   "usage_pct": 5.52,
+   "name_en": "Blaziken-Mega",
+   "slug": "blaziken-mega"
   },
   {
    "name": "ペリッパー",
-   "rank": 51,
-   "usage_pct": null
+   "rank": 32,
+   "usage_pct": 5.5,
+   "name_en": "Pelipper",
+   "slug": "pelipper"
   },
   {
-   "name": "オーロンゲ",
-   "rank": 52,
-   "usage_pct": null
+   "name": "カイリュー",
+   "rank": 33,
+   "usage_pct": 5.15,
+   "name_en": "Dragonite",
+   "slug": "dragonite"
   },
   {
-   "name": "フシギバナ",
-   "rank": 53,
-   "usage_pct": null
+   "name": "エースバーン",
+   "rank": 34,
+   "usage_pct": 5.0,
+   "name_en": "Cinderace",
+   "slug": "cinderace"
   },
   {
-   "name": "ドリュウズ",
-   "rank": 54,
-   "usage_pct": null
+   "name": "ドヒドイデ",
+   "rank": 35,
+   "usage_pct": 4.75,
+   "name_en": "Toxapex",
+   "slug": "toxapex"
   },
   {
-   "name": "サーナイト",
-   "rank": 55,
-   "usage_pct": null
+   "name": "メガピクシー",
+   "rank": 36,
+   "usage_pct": 4.12,
+   "name_en": "Clefable-Mega",
+   "slug": "clefable-mega"
   },
   {
-   "name": "ヒスイヌメルゴン",
-   "rank": 56,
-   "usage_pct": null
-  },
-  {
-   "name": "ブリムオン",
-   "rank": 57,
-   "usage_pct": null
-  },
-  {
-   "name": "クチート",
-   "rank": 58,
-   "usage_pct": null
-  },
-  {
-   "name": "エンペルト",
-   "rank": 59,
-   "usage_pct": null
-  },
-  {
-   "name": "メガニウム",
-   "rank": 60,
-   "usage_pct": null
-  },
-  {
-   "name": "ニンフィア",
-   "rank": 61,
-   "usage_pct": null
-  },
-  {
-   "name": "メタモン",
-   "rank": 62,
-   "usage_pct": null
-  },
-  {
-   "name": "バイバニラ",
-   "rank": 63,
-   "usage_pct": null
-  },
-  {
-   "name": "ドラパルト",
-   "rank": 64,
-   "usage_pct": null
-  },
-  {
-   "name": "ジュペッタ",
-   "rank": 65,
-   "usage_pct": null
+   "name": "パーモット",
+   "rank": 37,
+   "usage_pct": 4.1,
+   "name_en": "Pawmot",
+   "slug": "pawmot"
   },
   {
    "name": "カビゴン",
-   "rank": 66,
-   "usage_pct": null
+   "rank": 38,
+   "usage_pct": 4.06,
+   "name_en": "Snorlax",
+   "slug": "snorlax"
   },
   {
-   "name": "ハラバリー",
-   "rank": 67,
-   "usage_pct": null
+   "name": "オーロンゲ",
+   "rank": 39,
+   "usage_pct": 3.97,
+   "name_en": "Grimmsnarl",
+   "slug": "grimmsnarl"
   },
   {
-   "name": "ミミロップ",
-   "rank": 68,
-   "usage_pct": null
+   "name": "メガライチュウY",
+   "rank": 40,
+   "usage_pct": 3.78,
+   "name_en": "Raichu-Mega-Y",
+   "slug": "raichu-mega-y"
   },
   {
-   "name": "バサギリ",
-   "rank": 69,
-   "usage_pct": null
+   "name": "ソウブレイズ",
+   "rank": 41,
+   "usage_pct": 3.73,
+   "name_en": "Ceruledge",
+   "slug": "ceruledge"
   },
   {
-   "name": "ヒスイゾロアーク",
-   "rank": 70,
-   "usage_pct": null
+   "name": "ウルガモス",
+   "rank": 42,
+   "usage_pct": 3.6,
+   "name_en": "Volcarona",
+   "slug": "volcarona"
   },
   {
-   "name": "クエスパトラ",
-   "rank": 71,
-   "usage_pct": null
+   "name": "サザンドラ",
+   "rank": 43,
+   "usage_pct": 3.43,
+   "name_en": "Hydreigon",
+   "slug": "hydreigon"
+  },
+  {
+   "name": "メガゲッコウガ",
+   "rank": 44,
+   "usage_pct": 3.27,
+   "name_en": "Greninja-Mega",
+   "slug": "greninja-mega"
+  },
+  {
+   "name": "メガセグレイブ",
+   "rank": 45,
+   "usage_pct": 3.25,
+   "name_en": "Baxcalibur-Mega",
+   "slug": "baxcalibur-mega"
+  },
+  {
+   "name": "メガラグラージ",
+   "rank": 46,
+   "usage_pct": 3.22,
+   "name_en": "Swampert-Mega",
+   "slug": "swampert-mega"
+  },
+  {
+   "name": "メガリザードンX",
+   "rank": 47,
+   "usage_pct": 3.17,
+   "name_en": "Charizard-Mega-X",
+   "slug": "charizard-mega-x"
+  },
+  {
+   "name": "ウォッシュロトム",
+   "rank": 48,
+   "usage_pct": 3.06,
+   "name_en": "Rotom-Wash",
+   "slug": "rotom-wash"
+  },
+  {
+   "name": "ゲッコウガ",
+   "rank": 49,
+   "usage_pct": 2.94,
+   "name_en": "Greninja",
+   "slug": "greninja"
+  },
+  {
+   "name": "メガスターミー",
+   "rank": 50,
+   "usage_pct": 2.94,
+   "name_en": "Starmie-Mega",
+   "slug": "starmie-mega"
+  },
+  {
+   "name": "ハッサム",
+   "rank": 51,
+   "usage_pct": 2.89,
+   "name_en": "Scizor",
+   "slug": "scizor"
+  },
+  {
+   "name": "メガドラミドロ",
+   "rank": 52,
+   "usage_pct": 2.84,
+   "name_en": "Dragalge-Mega",
+   "slug": "dragalge-mega"
+  },
+  {
+   "name": "ヒートロトム",
+   "rank": 53,
+   "usage_pct": 2.72,
+   "name_en": "Rotom-Heat",
+   "slug": "rotom-heat"
+  },
+  {
+   "name": "メガジュペッタ",
+   "rank": 54,
+   "usage_pct": 2.65,
+   "name_en": "Banette-Mega",
+   "slug": "banette-mega"
+  },
+  {
+   "name": "メタモン",
+   "rank": 55,
+   "usage_pct": 2.64,
+   "name_en": "Ditto",
+   "slug": "ditto"
+  },
+  {
+   "name": "メガマフォクシー",
+   "rank": 56,
+   "usage_pct": 2.61,
+   "name_en": "Delphox-Mega",
+   "slug": "delphox-mega"
+  },
+  {
+   "name": "ギャラドス",
+   "rank": 57,
+   "usage_pct": 2.57,
+   "name_en": "Gyarados",
+   "slug": "gyarados"
   },
   {
    "name": "マンムー",
+   "rank": 58,
+   "usage_pct": 2.48,
+   "name_en": "Mamoswine",
+   "slug": "mamoswine"
+  },
+  {
+   "name": "メガキラフロル",
+   "rank": 59,
+   "usage_pct": 2.43,
+   "name_en": "Glimmora-Mega",
+   "slug": "glimmora-mega"
+  },
+  {
+   "name": "メガルカリオ",
+   "rank": 60,
+   "usage_pct": 2.41,
+   "name_en": "Lucario-Mega",
+   "slug": "lucario-mega"
+  },
+  {
+   "name": "バイバニラ",
+   "rank": 61,
+   "usage_pct": 2.4,
+   "name_en": "Vanilluxe",
+   "slug": "vanilluxe"
+  },
+  {
+   "name": "ラウドボーン",
+   "rank": 62,
+   "usage_pct": 2.38,
+   "name_en": "Skeledirge",
+   "slug": "skeledirge"
+  },
+  {
+   "name": "ブリムオン",
+   "rank": 63,
+   "usage_pct": 2.2,
+   "name_en": "Hatterene",
+   "slug": "hatterene"
+  },
+  {
+   "name": "メガフシギバナ",
+   "rank": 64,
+   "usage_pct": 2.18,
+   "name_en": "Venusaur-Mega",
+   "slug": "venusaur-mega"
+  },
+  {
+   "name": "エンペルト",
+   "rank": 65,
+   "usage_pct": 2.16,
+   "name_en": "Empoleon",
+   "slug": "empoleon"
+  },
+  {
+   "name": "ドラパルト",
+   "rank": 66,
+   "usage_pct": 2.14,
+   "name_en": "Dragapult",
+   "slug": "dragapult"
+  },
+  {
+   "name": "ペンドラー",
+   "rank": 67,
+   "usage_pct": 2.09,
+   "name_en": "Scolipede",
+   "slug": "scolipede"
+  },
+  {
+   "name": "メガメガニウム",
+   "rank": 68,
+   "usage_pct": 1.98,
+   "name_en": "Meganium-Mega",
+   "slug": "meganium-mega"
+  },
+  {
+   "name": "メガムクホーク",
+   "rank": 69,
+   "usage_pct": 1.95,
+   "name_en": "Staraptor-Mega",
+   "slug": "staraptor-mega"
+  },
+  {
+   "name": "バンギラス",
+   "rank": 70,
+   "usage_pct": 1.83,
+   "name_en": "Tyranitar",
+   "slug": "tyranitar"
+  },
+  {
+   "name": "メガミミロップ",
+   "rank": 71,
+   "usage_pct": 1.71,
+   "name_en": "Lopunny-Mega",
+   "slug": "lopunny-mega"
+  },
+  {
+   "name": "ラグラージ",
    "rank": 72,
-   "usage_pct": null
+   "usage_pct": 1.71,
+   "name_en": "Swampert",
+   "slug": "swampert"
   },
   {
-   "name": "ミロカロス",
+   "name": "メガアブソルZ",
    "rank": 73,
-   "usage_pct": null
+   "usage_pct": 1.67,
+   "name_en": "Absol-Mega-Z",
+   "slug": "absol-mega-z"
   },
   {
-   "name": "アブソル",
+   "name": "ガラルヤドキング",
    "rank": 74,
-   "usage_pct": null
+   "usage_pct": 1.66,
+   "name_en": "Slowking-Galar",
+   "slug": "slowking-galar"
   },
   {
-   "name": "エアームド",
+   "name": "ヒスイゾロアーク",
    "rank": 75,
-   "usage_pct": null
+   "usage_pct": 1.6,
+   "name_en": "Zoroark-Hisui",
+   "slug": "zoroark-hisui"
+  },
+  {
+   "name": "ドリュウズ",
+   "rank": 76,
+   "usage_pct": 1.58,
+   "name_en": "Excadrill",
+   "slug": "excadrill"
+  },
+  {
+   "name": "クエスパトラ",
+   "rank": 77,
+   "usage_pct": 1.53,
+   "name_en": "Espathra",
+   "slug": "espathra"
+  },
+  {
+   "name": "バシャーモ",
+   "rank": 78,
+   "usage_pct": 1.37,
+   "name_en": "Blaziken",
+   "slug": "blaziken"
+  },
+  {
+   "name": "ハラバリー",
+   "rank": 79,
+   "usage_pct": 1.37,
+   "name_en": "Bellibolt",
+   "slug": "bellibolt"
+  },
+  {
+   "name": "ゲンガー",
+   "rank": 80,
+   "usage_pct": 1.35,
+   "name_en": "Gengar",
+   "slug": "gengar"
+  },
+  {
+   "name": "メガクチート",
+   "rank": 81,
+   "usage_pct": 1.25,
+   "name_en": "Mawile-Mega",
+   "slug": "mawile-mega"
+  },
+  {
+   "name": "ニンフィア",
+   "rank": 82,
+   "usage_pct": 1.19,
+   "name_en": "Sylveon",
+   "slug": "sylveon"
+  },
+  {
+   "name": "ピクシー",
+   "rank": 83,
+   "usage_pct": 1.09,
+   "name_en": "Clefable",
+   "slug": "clefable"
+  },
+  {
+   "name": "デカヌチャン",
+   "rank": 84,
+   "usage_pct": 1.03,
+   "name_en": "Tinkaton",
+   "slug": "tinkaton"
+  },
+  {
+   "name": "メガカエンジシ",
+   "rank": 85,
+   "usage_pct": 0.97,
+   "name_en": "Pyroar-Mega",
+   "slug": "pyroar-mega"
+  },
+  {
+   "name": "スコヴィラン",
+   "rank": 86,
+   "usage_pct": 0.96,
+   "name_en": "Scovillain",
+   "slug": "scovillain"
+  },
+  {
+   "name": "グレンアルマ",
+   "rank": 87,
+   "usage_pct": 0.94,
+   "name_en": "Armarouge",
+   "slug": "armarouge"
+  },
+  {
+   "name": "メガガルーラ",
+   "rank": 88,
+   "usage_pct": 0.92,
+   "name_en": "Kangaskhan-Mega",
+   "slug": "kangaskhan-mega"
+  },
+  {
+   "name": "ストリンダー",
+   "rank": 89,
+   "usage_pct": 0.92,
+   "name_en": "Toxtricity",
+   "slug": "toxtricity-amped"
+  },
+  {
+   "name": "メガバンギラス",
+   "rank": 90,
+   "usage_pct": 0.82,
+   "name_en": "Tyranitar-Mega",
+   "slug": "tyranitar-mega"
+  },
+  {
+   "name": "エーフィ",
+   "rank": 91,
+   "usage_pct": 0.78,
+   "name_en": "Espeon",
+   "slug": "espeon"
+  },
+  {
+   "name": "メガサーナイト",
+   "rank": 92,
+   "usage_pct": 0.77,
+   "name_en": "Gardevoir-Mega",
+   "slug": "gardevoir-mega"
+  },
+  {
+   "name": "メガウツボット",
+   "rank": 93,
+   "usage_pct": 0.75,
+   "name_en": "Victreebel-Mega",
+   "slug": "victreebel-mega"
+  },
+  {
+   "name": "ヒスイウインディ",
+   "rank": 94,
+   "usage_pct": 0.74,
+   "name_en": "Arcanine-Hisui",
+   "slug": "arcanine-hisui"
+  },
+  {
+   "name": "ペロリーム",
+   "rank": 95,
+   "usage_pct": 0.73,
+   "name_en": "Slurpuff",
+   "slug": "slurpuff"
   },
   {
    "name": "エルレイド",
-   "rank": 76,
-   "usage_pct": null
+   "rank": 96,
+   "usage_pct": 0.73,
+   "name_en": "Gallade",
+   "slug": "gallade"
+  },
+  {
+   "name": "メガハッサム",
+   "rank": 97,
+   "usage_pct": 0.72,
+   "name_en": "Scizor-Mega",
+   "slug": "scizor-mega"
+  },
+  {
+   "name": "ポットデス",
+   "rank": 98,
+   "usage_pct": 0.69,
+   "name_en": "Polteageist",
+   "slug": "polteageist"
+  },
+  {
+   "name": "フラエッテ（えいえんのはな）",
+   "rank": 99,
+   "usage_pct": 0.69,
+   "name_en": "Floette-Eternal",
+   "slug": "floette-eternal"
+  },
+  {
+   "name": "コノヨザル",
+   "rank": 100,
+   "usage_pct": 0.62,
+   "name_en": "Annihilape",
+   "slug": "annihilape"
+  },
+  {
+   "name": "ミロカロス",
+   "rank": 101,
+   "usage_pct": 0.59,
+   "name_en": "Milotic",
+   "slug": "milotic"
+  },
+  {
+   "name": "ジャローダ",
+   "rank": 102,
+   "usage_pct": 0.59,
+   "name_en": "Serperior",
+   "slug": "serperior"
+  },
+  {
+   "name": "ヤミラミ",
+   "rank": 103,
+   "usage_pct": 0.57,
+   "name_en": "Sableye",
+   "slug": "sableye"
+  },
+  {
+   "name": "メガヘラクロス",
+   "rank": 104,
+   "usage_pct": 0.56,
+   "name_en": "Heracross-Mega",
+   "slug": "heracross-mega"
+  },
+  {
+   "name": "ラフレシア",
+   "rank": 105,
+   "usage_pct": 0.54,
+   "name_en": "Vileplume",
+   "slug": "vileplume"
+  },
+  {
+   "name": "オニシズクモ",
+   "rank": 106,
+   "usage_pct": 0.53,
+   "name_en": "Araquanid",
+   "slug": "araquanid"
+  },
+  {
+   "name": "メガユキメノコ",
+   "rank": 107,
+   "usage_pct": 0.53,
+   "name_en": "Froslass-Mega",
+   "slug": "froslass-mega"
+  },
+  {
+   "name": "メガガブリアス",
+   "rank": 108,
+   "usage_pct": 0.52,
+   "name_en": "Garchomp-Mega",
+   "slug": "garchomp-mega"
+  },
+  {
+   "name": "バサギリ",
+   "rank": 109,
+   "usage_pct": 0.52,
+   "name_en": "Kleavor",
+   "slug": "kleavor"
+  },
+  {
+   "name": "ヒスイヌメルゴン",
+   "rank": 110,
+   "usage_pct": 0.51,
+   "name_en": "Goodra-Hisui",
+   "slug": "goodra-hisui"
+  },
+  {
+   "name": "エルフーン",
+   "rank": 111,
+   "usage_pct": 0.5,
+   "name_en": "Whimsicott",
+   "slug": "whimsicott"
+  },
+  {
+   "name": "ハカドッグ",
+   "rank": 112,
+   "usage_pct": 0.5,
+   "name_en": "Houndstone",
+   "slug": "houndstone"
+  },
+  {
+   "name": "シャワーズ",
+   "rank": 113,
+   "usage_pct": 0.46,
+   "name_en": "Vaporeon",
+   "slug": "vaporeon"
+  },
+  {
+   "name": "メガスコヴィラン",
+   "rank": 114,
+   "usage_pct": 0.44,
+   "name_en": "Scovillain-Mega",
+   "slug": "scovillain-mega"
+  },
+  {
+   "name": "メガフーディン",
+   "rank": 115,
+   "usage_pct": 0.43,
+   "name_en": "Alakazam-Mega",
+   "slug": "alakazam-mega"
+  },
+  {
+   "name": "フシギバナ",
+   "rank": 116,
+   "usage_pct": 0.4,
+   "name_en": "Venusaur",
+   "slug": "venusaur"
+  },
+  {
+   "name": "カラマネロ",
+   "rank": 117,
+   "usage_pct": 0.39,
+   "name_en": "Malamar",
+   "slug": "malamar"
+  },
+  {
+   "name": "ボーマンダ",
+   "rank": 118,
+   "usage_pct": 0.38,
+   "name_en": "Salamence",
+   "slug": "salamence"
+  },
+  {
+   "name": "イルカマン（ナイーブ）",
+   "rank": 119,
+   "usage_pct": 0.35,
+   "name_en": "Palafin",
+   "slug": "palafin-zero"
+  },
+  {
+   "name": "メタグロス",
+   "rank": 120,
+   "usage_pct": 0.35,
+   "name_en": "Metagross",
+   "slug": "metagross"
+  },
+  {
+   "name": "マリルリ",
+   "rank": 121,
+   "usage_pct": 0.35,
+   "name_en": "Azumarill",
+   "slug": "azumarill"
+  },
+  {
+   "name": "ハリーマン",
+   "rank": 122,
+   "usage_pct": 0.35,
+   "name_en": "Overqwil",
+   "slug": "overqwil"
+  },
+  {
+   "name": "オリーヴァ",
+   "rank": 123,
+   "usage_pct": 0.33,
+   "name_en": "Arboliva",
+   "slug": "arboliva"
+  },
+  {
+   "name": "イエッサン（メス）",
+   "rank": 124,
+   "usage_pct": 0.3,
+   "name_en": "Indeedee-F",
+   "slug": "indeedee-female"
+  },
+  {
+   "name": "ミミズズ",
+   "rank": 125,
+   "usage_pct": 0.29,
+   "name_en": "Orthworm",
+   "slug": "orthworm"
+  },
+  {
+   "name": "メガズルズキン",
+   "rank": 126,
+   "usage_pct": 0.29,
+   "name_en": "Scrafty-Mega",
+   "slug": "scrafty-mega"
+  },
+  {
+   "name": "エアームド",
+   "rank": 127,
+   "usage_pct": 0.28,
+   "name_en": "Skarmory",
+   "slug": "skarmory"
+  },
+  {
+   "name": "メガボスゴドラ",
+   "rank": 128,
+   "usage_pct": 0.28,
+   "name_en": "Aggron-Mega",
+   "slug": "aggron-mega"
   },
   {
    "name": "ニョロトノ",
-   "rank": 77,
-   "usage_pct": null
+   "rank": 129,
+   "usage_pct": 0.28,
+   "name_en": "Politoed",
+   "slug": "politoed"
+  },
+  {
+   "name": "コータス",
+   "rank": 130,
+   "usage_pct": 0.26,
+   "name_en": "Torkoal",
+   "slug": "torkoal"
+  },
+  {
+   "name": "メガシビルドン",
+   "rank": 131,
+   "usage_pct": 0.26,
+   "name_en": "Eelektross-Mega",
+   "slug": "eelektross-mega"
+  },
+  {
+   "name": "メガユキノオー",
+   "rank": 132,
+   "usage_pct": 0.26,
+   "name_en": "Abomasnow-Mega",
+   "slug": "abomasnow-mega"
+  },
+  {
+   "name": "ビビヨン",
+   "rank": 133,
+   "usage_pct": 0.26,
+   "name_en": "Vivillon",
+   "slug": "vivillon"
+  },
+  {
+   "name": "メガペンドラー",
+   "rank": 134,
+   "usage_pct": 0.26,
+   "name_en": "Scolipede-Mega",
+   "slug": "scolipede-mega"
+  },
+  {
+   "name": "メガジュカイン",
+   "rank": 135,
+   "usage_pct": 0.25,
+   "name_en": "Sceptile-Mega",
+   "slug": "sceptile-mega"
+  },
+  {
+   "name": "ネギガナイト",
+   "rank": 136,
+   "usage_pct": 0.25,
+   "name_en": "Sirfetch'd",
+   "slug": "sirfetchd"
+  },
+  {
+   "name": "アローラペルシアン",
+   "rank": 137,
+   "usage_pct": 0.24,
+   "name_en": "Persian-Alola",
+   "slug": "persian-alola"
+  },
+  {
+   "name": "ランクルス",
+   "rank": 138,
+   "usage_pct": 0.23,
+   "name_en": "Reuniclus",
+   "slug": "reuniclus"
+  },
+  {
+   "name": "ドデカバシ",
+   "rank": 139,
+   "usage_pct": 0.23,
+   "name_en": "Toucannon",
+   "slug": "toucannon"
+  },
+  {
+   "name": "メガエアームド",
+   "rank": 140,
+   "usage_pct": 0.23,
+   "name_en": "Skarmory-Mega",
+   "slug": "skarmory-mega"
+  },
+  {
+   "name": "メガエンブオー",
+   "rank": 141,
+   "usage_pct": 0.23,
+   "name_en": "Emboar-Mega",
+   "slug": "emboar-mega"
+  },
+  {
+   "name": "メガヤドラン",
+   "rank": 142,
+   "usage_pct": 0.23,
+   "name_en": "Slowbro-Mega",
+   "slug": "slowbro-mega"
+  },
+  {
+   "name": "サンダース",
+   "rank": 143,
+   "usage_pct": 0.23,
+   "name_en": "Jolteon",
+   "slug": "jolteon"
+  },
+  {
+   "name": "ゴウカザル",
+   "rank": 144,
+   "usage_pct": 0.22,
+   "name_en": "Infernape",
+   "slug": "infernape"
+  },
+  {
+   "name": "オンバーン",
+   "rank": 145,
+   "usage_pct": 0.22,
+   "name_en": "Noivern",
+   "slug": "noivern"
+  },
+  {
+   "name": "ガオガエン",
+   "rank": 146,
+   "usage_pct": 0.22,
+   "name_en": "Incineroar",
+   "slug": "incineroar"
+  },
+  {
+   "name": "ロズレイド",
+   "rank": 147,
+   "usage_pct": 0.22,
+   "name_en": "Roserade",
+   "slug": "roserade"
+  },
+  {
+   "name": "イダイトウ（メス）",
+   "rank": 148,
+   "usage_pct": 0.21,
+   "name_en": "Basculegion-F",
+   "slug": "basculegion-female"
+  },
+  {
+   "name": "グレイシア",
+   "rank": 149,
+   "usage_pct": 0.21,
+   "name_en": "Glaceon",
+   "slug": "glaceon"
+  },
+  {
+   "name": "イッカネズミ",
+   "rank": 150,
+   "usage_pct": 0.2,
+   "name_en": "Maushold",
+   "slug": "maushold-family-of-four"
+  },
+  {
+   "name": "ウェーニバル",
+   "rank": 151,
+   "usage_pct": 0.2,
+   "name_en": "Quaquaval",
+   "slug": "quaquaval"
+  },
+  {
+   "name": "ブースター",
+   "rank": 152,
+   "usage_pct": 0.2,
+   "name_en": "Flareon",
+   "slug": "flareon"
+  },
+  {
+   "name": "ホルード",
+   "rank": 153,
+   "usage_pct": 0.19,
+   "name_en": "Diggersby",
+   "slug": "diggersby"
+  },
+  {
+   "name": "メガガメノデス",
+   "rank": 154,
+   "usage_pct": 0.19,
+   "name_en": "Barbaracle-Mega",
+   "slug": "barbaracle-mega"
+  },
+  {
+   "name": "メガチルタリス",
+   "rank": 155,
+   "usage_pct": 0.19,
+   "name_en": "Altaria-Mega",
+   "slug": "altaria-mega"
+  },
+  {
+   "name": "マニューラ",
+   "rank": 156,
+   "usage_pct": 0.17,
+   "name_en": "Weavile",
+   "slug": "weavile"
+  },
+  {
+   "name": "デスカーン",
+   "rank": 157,
+   "usage_pct": 0.16,
+   "name_en": "Cofagrigus",
+   "slug": "cofagrigus"
+  },
+  {
+   "name": "メガシャンデラ",
+   "rank": 158,
+   "usage_pct": 0.16,
+   "name_en": "Chandelure-Mega",
+   "slug": "chandelure-mega"
+  },
+  {
+   "name": "ヒスイジュナイパー",
+   "rank": 159,
+   "usage_pct": 0.16,
+   "name_en": "Decidueye-Hisui",
+   "slug": "decidueye-hisui"
+  },
+  {
+   "name": "ムクホーク",
+   "rank": 160,
+   "usage_pct": 0.15,
+   "name_en": "Staraptor",
+   "slug": "staraptor"
+  },
+  {
+   "name": "ヤドキング",
+   "rank": 161,
+   "usage_pct": 0.15,
+   "name_en": "Slowking",
+   "slug": "slowking"
+  },
+  {
+   "name": "ミカルゲ",
+   "rank": 162,
+   "usage_pct": 0.15,
+   "name_en": "Spiritomb",
+   "slug": "spiritomb"
+  },
+  {
+   "name": "ローブシン",
+   "rank": 163,
+   "usage_pct": 0.15,
+   "name_en": "Conkeldurr",
+   "slug": "conkeldurr"
+  },
+  {
+   "name": "ヌメルゴン",
+   "rank": 164,
+   "usage_pct": 0.14,
+   "name_en": "Goodra",
+   "slug": "goodra"
+  },
+  {
+   "name": "ルチャブル",
+   "rank": 165,
+   "usage_pct": 0.14,
+   "name_en": "Hawlucha",
+   "slug": "hawlucha"
+  },
+  {
+   "name": "メガデンリュウ",
+   "rank": 166,
+   "usage_pct": 0.14,
+   "name_en": "Ampharos-Mega",
+   "slug": "ampharos-mega"
+  },
+  {
+   "name": "ヤバソチャ",
+   "rank": 167,
+   "usage_pct": 0.13,
+   "name_en": "Sinistcha",
+   "slug": "sinistcha"
+  },
+  {
+   "name": "メガヤミラミ",
+   "rank": 168,
+   "usage_pct": 0.13,
+   "name_en": "Sableye-Mega",
+   "slug": "sableye-mega"
+  },
+  {
+   "name": "メガスピアー",
+   "rank": 169,
+   "usage_pct": 0.12,
+   "name_en": "Beedrill-Mega",
+   "slug": "beedrill-mega"
+  },
+  {
+   "name": "キュウコン",
+   "rank": 170,
+   "usage_pct": 0.12,
+   "name_en": "Ninetales",
+   "slug": "ninetales"
+  },
+  {
+   "name": "ヤドラン",
+   "rank": 171,
+   "usage_pct": 0.12,
+   "name_en": "Slowbro",
+   "slug": "slowbro"
+  },
+  {
+   "name": "ハガネール",
+   "rank": 172,
+   "usage_pct": 0.12,
+   "name_en": "Steelix",
+   "slug": "steelix"
+  },
+  {
+   "name": "クレベース",
+   "rank": 173,
+   "usage_pct": 0.12,
+   "name_en": "Avalugg",
+   "slug": "avalugg"
+  },
+  {
+   "name": "ジャラランガ",
+   "rank": 174,
+   "usage_pct": 0.11,
+   "name_en": "Kommo-o",
+   "slug": "kommo-o"
+  },
+  {
+   "name": "メガタイレーツ",
+   "rank": 175,
+   "usage_pct": 0.11,
+   "name_en": "Falinks-Mega",
+   "slug": "falinks-mega"
+  },
+  {
+   "name": "オトスパス",
+   "rank": 176,
+   "usage_pct": 0.11,
+   "name_en": "Grapploct",
+   "slug": "grapploct"
+  },
+  {
+   "name": "ルガルガン（たそがれ）",
+   "rank": 177,
+   "usage_pct": 0.11,
+   "name_en": "Lycanroc-Dusk",
+   "slug": "lycanroc-dusk"
+  },
+  {
+   "name": "リーフィア",
+   "rank": 178,
+   "usage_pct": 0.1,
+   "name_en": "Leafeon",
+   "slug": "leafeon"
+  },
+  {
+   "name": "メガオーダイル",
+   "rank": 179,
+   "usage_pct": 0.1,
+   "name_en": "Feraligatr-Mega",
+   "slug": "feraligatr-mega"
+  },
+  {
+   "name": "パルデアケンタロス（ほのお）",
+   "rank": 180,
+   "usage_pct": 0.1,
+   "name_en": "Tauros-Paldea-Blaze",
+   "slug": "tauros-paldea-blaze-breed"
+  },
+  {
+   "name": "モルペコ",
+   "rank": 181,
+   "usage_pct": 0.1,
+   "name_en": "Morpeko",
+   "slug": "morpeko-full-belly"
+  },
+  {
+   "name": "バクフーン",
+   "rank": 182,
+   "usage_pct": 0.09,
+   "name_en": "Typhlosion",
+   "slug": "typhlosion"
+  },
+  {
+   "name": "サダイジャ",
+   "rank": 183,
+   "usage_pct": 0.09,
+   "name_en": "Sandaconda",
+   "slug": "sandaconda"
+  },
+  {
+   "name": "ジュナイパー",
+   "rank": 184,
+   "usage_pct": 0.09,
+   "name_en": "Decidueye",
+   "slug": "decidueye"
+  },
+  {
+   "name": "ツンベアー",
+   "rank": 185,
+   "usage_pct": 0.09,
+   "name_en": "Beartic",
+   "slug": "beartic"
+  },
+  {
+   "name": "ミミロップ",
+   "rank": 186,
+   "usage_pct": 0.08,
+   "name_en": "Lopunny",
+   "slug": "lopunny"
+  },
+  {
+   "name": "アマルルガ",
+   "rank": 187,
+   "usage_pct": 0.08,
+   "name_en": "Aurorus",
+   "slug": "aurorus"
+  },
+  {
+   "name": "ワルビアル",
+   "rank": 188,
+   "usage_pct": 0.08,
+   "name_en": "Krookodile",
+   "slug": "krookodile"
+  },
+  {
+   "name": "フロストロトム",
+   "rank": 189,
+   "usage_pct": 0.08,
+   "name_en": "Rotom-Frost",
+   "slug": "rotom-frost"
+  },
+  {
+   "name": "メガピジョット",
+   "rank": 190,
+   "usage_pct": 0.07,
+   "name_en": "Pidgeot-Mega",
+   "slug": "pidgeot-mega"
+  },
+  {
+   "name": "ブロスター",
+   "rank": 191,
+   "usage_pct": 0.07,
+   "name_en": "Clawitzer",
+   "slug": "clawitzer"
+  },
+  {
+   "name": "メガオニゴーリ",
+   "rank": 192,
+   "usage_pct": 0.07,
+   "name_en": "Glalie-Mega",
+   "slug": "glalie-mega"
+  },
+  {
+   "name": "ゴロンダ",
+   "rank": 193,
+   "usage_pct": 0.07,
+   "name_en": "Pangoro",
+   "slug": "pangoro"
+  },
+  {
+   "name": "ガラルヤドラン",
+   "rank": 194,
+   "usage_pct": 0.07,
+   "name_en": "Slowbro-Galar",
+   "slug": "slowbro-galar"
+  },
+  {
+   "name": "リキキリン",
+   "rank": 195,
+   "usage_pct": 0.07,
+   "name_en": "Farigiraf",
+   "slug": "farigiraf"
+  },
+  {
+   "name": "メガプテラ",
+   "rank": 196,
+   "usage_pct": 0.07,
+   "name_en": "Aerodactyl-Mega",
+   "slug": "aerodactyl-mega"
+  },
+  {
+   "name": "インテレオン",
+   "rank": 197,
+   "usage_pct": 0.07,
+   "name_en": "Inteleon",
+   "slug": "inteleon"
+  },
+  {
+   "name": "プテラ",
+   "rank": 198,
+   "usage_pct": 0.07,
+   "name_en": "Aerodactyl",
+   "slug": "aerodactyl"
+  },
+  {
+   "name": "バクーダ",
+   "rank": 199,
+   "usage_pct": 0.07,
+   "name_en": "Camerupt",
+   "slug": "camerupt"
+  },
+  {
+   "name": "サーナイト",
+   "rank": 200,
+   "usage_pct": 0.06,
+   "name_en": "Gardevoir",
+   "slug": "gardevoir"
+  },
+  {
+   "name": "シャンデラ",
+   "rank": 201,
+   "usage_pct": 0.06,
+   "name_en": "Chandelure",
+   "slug": "chandelure"
+  },
+  {
+   "name": "バチンウニ",
+   "rank": 202,
+   "usage_pct": 0.06,
+   "name_en": "Pincurchin",
+   "slug": "pincurchin"
+  },
+  {
+   "name": "ヒスイバクフーン",
+   "rank": 203,
+   "usage_pct": 0.06,
+   "name_en": "Typhlosion-Hisui",
+   "slug": "typhlosion-hisui"
+  },
+  {
+   "name": "フーディン",
+   "rank": 204,
+   "usage_pct": 0.06,
+   "name_en": "Alakazam",
+   "slug": "alakazam"
+  },
+  {
+   "name": "カメックス",
+   "rank": 205,
+   "usage_pct": 0.06,
+   "name_en": "Blastoise",
+   "slug": "blastoise"
+  },
+  {
+   "name": "メガアブソル",
+   "rank": 206,
+   "usage_pct": 0.06,
+   "name_en": "Absol-Mega",
+   "slug": "absol-mega"
+  },
+  {
+   "name": "グライオン",
+   "rank": 207,
+   "usage_pct": 0.06,
+   "name_en": "Gliscor",
+   "slug": "gliscor"
+  },
+  {
+   "name": "エレザード",
+   "rank": 208,
+   "usage_pct": 0.06,
+   "name_en": "Heliolisk",
+   "slug": "heliolisk"
+  },
+  {
+   "name": "ガルーラ",
+   "rank": 209,
+   "usage_pct": 0.06,
+   "name_en": "Kangaskhan",
+   "slug": "kangaskhan"
+  },
+  {
+   "name": "メガカイロス",
+   "rank": 210,
+   "usage_pct": 0.06,
+   "name_en": "Pinsir-Mega",
+   "slug": "pinsir-mega"
+  },
+  {
+   "name": "ウインディ",
+   "rank": 211,
+   "usage_pct": 0.06,
+   "name_en": "Arcanine",
+   "slug": "arcanine"
+  },
+  {
+   "name": "メガヘルガー",
+   "rank": 212,
+   "usage_pct": 0.06,
+   "name_en": "Houndoom-Mega",
+   "slug": "houndoom-mega"
+  },
+  {
+   "name": "メガサメハダー",
+   "rank": 213,
+   "usage_pct": 0.05,
+   "name_en": "Sharpedo-Mega",
+   "slug": "sharpedo-mega"
+  },
+  {
+   "name": "キョジオーン",
+   "rank": 214,
+   "usage_pct": 0.05,
+   "name_en": "Garganacl",
+   "slug": "garganacl"
+  },
+  {
+   "name": "サメハダー",
+   "rank": 215,
+   "usage_pct": 0.05,
+   "name_en": "Sharpedo",
+   "slug": "sharpedo"
+  },
+  {
+   "name": "バンバドロ",
+   "rank": 216,
+   "usage_pct": 0.05,
+   "name_en": "Mudsdale",
+   "slug": "mudsdale"
+  },
+  {
+   "name": "メガライチュウX",
+   "rank": 217,
+   "usage_pct": 0.05,
+   "name_en": "Raichu-Mega-X",
+   "slug": "raichu-mega-x"
+  },
+  {
+   "name": "グソクムシャ",
+   "rank": 218,
+   "usage_pct": 0.05,
+   "name_en": "Golisopod",
+   "slug": "golisopod"
+  },
+  {
+   "name": "エンニュート",
+   "rank": 219,
+   "usage_pct": 0.05,
+   "name_en": "Salazzle",
+   "slug": "salazzle"
+  },
+  {
+   "name": "カットロトム",
+   "rank": 220,
+   "usage_pct": 0.05,
+   "name_en": "Rotom-Mow",
+   "slug": "rotom-mow"
+  },
+  {
+   "name": "クレッフィ",
+   "rank": 221,
+   "usage_pct": 0.04,
+   "name_en": "Klefki",
+   "slug": "klefki"
+  },
+  {
+   "name": "メガドリュウズ",
+   "rank": 222,
+   "usage_pct": 0.04,
+   "name_en": "Excadrill-Mega",
+   "slug": "excadrill-mega"
+  },
+  {
+   "name": "ピカチュウ",
+   "rank": 223,
+   "usage_pct": 0.04,
+   "name_en": "Pikachu",
+   "slug": "pikachu"
+  },
+  {
+   "name": "ドダイトス",
+   "rank": 224,
+   "usage_pct": 0.04,
+   "name_en": "Torterra",
+   "slug": "torterra"
+  },
+  {
+   "name": "メガエルレイド",
+   "rank": 225,
+   "usage_pct": 0.04,
+   "name_en": "Gallade-Mega",
+   "slug": "gallade-mega"
+  },
+  {
+   "name": "ニャオニクス（オス）",
+   "rank": 226,
+   "usage_pct": 0.04,
+   "name_en": "Meowstic",
+   "slug": "meowstic-male"
+  },
+  {
+   "name": "ブリガロン",
+   "rank": 227,
+   "usage_pct": 0.04,
+   "name_en": "Chesnaught",
+   "slug": "chesnaught"
+  },
+  {
+   "name": "パンプジン（ギガ玉）",
+   "rank": 228,
+   "usage_pct": 0.03,
+   "name_en": "Gourgeist-Super",
+   "slug": "gourgeist-super"
+  },
+  {
+   "name": "アーボック",
+   "rank": 229,
+   "usage_pct": 0.03,
+   "name_en": "Arbok",
+   "slug": "arbok"
+  },
+  {
+   "name": "メガチャーレム",
+   "rank": 230,
+   "usage_pct": 0.03,
+   "name_en": "Medicham-Mega",
+   "slug": "medicham-mega"
+  },
+  {
+   "name": "フラージェス",
+   "rank": 231,
+   "usage_pct": 0.03,
+   "name_en": "Florges",
+   "slug": "florges"
+  },
+  {
+   "name": "メガライボルト",
+   "rank": 232,
+   "usage_pct": 0.03,
+   "name_en": "Manectric-Mega",
+   "slug": "manectric-mega"
+  },
+  {
+   "name": "デンリュウ",
+   "rank": 233,
+   "usage_pct": 0.03,
+   "name_en": "Ampharos",
+   "slug": "ampharos"
+  },
+  {
+   "name": "フォレトス",
+   "rank": 234,
+   "usage_pct": 0.03,
+   "name_en": "Forretress",
+   "slug": "forretress"
+  },
+  {
+   "name": "ペルシアン",
+   "rank": 235,
+   "usage_pct": 0.03,
+   "name_en": "Persian",
+   "slug": "persian"
+  },
+  {
+   "name": "メガバクーダ",
+   "rank": 236,
+   "usage_pct": 0.03,
+   "name_en": "Camerupt-Mega",
+   "slug": "camerupt-mega"
+  },
+  {
+   "name": "ラムパルド",
+   "rank": 237,
+   "usage_pct": 0.03,
+   "name_en": "Rampardos",
+   "slug": "rampardos"
+  },
+  {
+   "name": "メガゴルーグ",
+   "rank": 238,
+   "usage_pct": 0.03,
+   "name_en": "Golurk-Mega",
+   "slug": "golurk-mega"
+  },
+  {
+   "name": "カミツオロチ",
+   "rank": 239,
+   "usage_pct": 0.03,
+   "name_en": "Hydrapple",
+   "slug": "hydrapple"
+  },
+  {
+   "name": "トリデプス",
+   "rank": 240,
+   "usage_pct": 0.03,
+   "name_en": "Bastiodon",
+   "slug": "bastiodon"
+  },
+  {
+   "name": "バリコオル",
+   "rank": 241,
+   "usage_pct": 0.03,
+   "name_en": "Mr. Rime",
+   "slug": "mr-rime"
+  },
+  {
+   "name": "マッギョ",
+   "rank": 242,
+   "usage_pct": 0.03,
+   "name_en": "Stunfisk",
+   "slug": "stunfisk"
+  },
+  {
+   "name": "ファイアロー",
+   "rank": 243,
+   "usage_pct": 0.03,
+   "name_en": "Talonflame",
+   "slug": "talonflame"
+  },
+  {
+   "name": "ジュカイン",
+   "rank": 244,
+   "usage_pct": 0.03,
+   "name_en": "Sceptile",
+   "slug": "sceptile"
+  },
+  {
+   "name": "スターミー",
+   "rank": 245,
+   "usage_pct": 0.03,
+   "name_en": "Starmie",
+   "slug": "starmie"
+  },
+  {
+   "name": "メガブリガロン",
+   "rank": 246,
+   "usage_pct": 0.03,
+   "name_en": "Chesnaught-Mega",
+   "slug": "chesnaught-mega"
+  },
+  {
+   "name": "アップリュー",
+   "rank": 247,
+   "usage_pct": 0.03,
+   "name_en": "Flapple",
+   "slug": "flapple"
+  },
+  {
+   "name": "デスバーン",
+   "rank": 248,
+   "usage_pct": 0.03,
+   "name_en": "Runerigus",
+   "slug": "runerigus"
+  },
+  {
+   "name": "スピンロトム",
+   "rank": 249,
+   "usage_pct": 0.02,
+   "name_en": "Rotom-Fan",
+   "slug": "rotom-fan"
+  },
+  {
+   "name": "メガチリーン",
+   "rank": 250,
+   "usage_pct": 0.02,
+   "name_en": "Chimecho-Mega",
+   "slug": "chimecho-mega"
+  },
+  {
+   "name": "アリアドス",
+   "rank": 251,
+   "usage_pct": 0.02,
+   "name_en": "Ariados",
+   "slug": "ariados"
+  },
+  {
+   "name": "ニャイキング",
+   "rank": 252,
+   "usage_pct": 0.02,
+   "name_en": "Perrserker",
+   "slug": "perrserker"
+  },
+  {
+   "name": "ユキノオー",
+   "rank": 253,
+   "usage_pct": 0.02,
+   "name_en": "Abomasnow",
+   "slug": "abomasnow"
+  },
+  {
+   "name": "アヤシシ",
+   "rank": 254,
+   "usage_pct": 0.02,
+   "name_en": "Wyrdeer",
+   "slug": "wyrdeer"
+  },
+  {
+   "name": "メガタブンネ",
+   "rank": 255,
+   "usage_pct": 0.02,
+   "name_en": "Audino-Mega",
+   "slug": "audino-mega"
+  },
+  {
+   "name": "ガチゴラス",
+   "rank": 256,
+   "usage_pct": 0.02,
+   "name_en": "Tyrantrum",
+   "slug": "tyrantrum"
+  },
+  {
+   "name": "オニゴーリ",
+   "rank": 257,
+   "usage_pct": 0.02,
+   "name_en": "Glalie",
+   "slug": "glalie"
+  },
+  {
+   "name": "ルガルガン（まひる）",
+   "rank": 258,
+   "usage_pct": 0.02,
+   "name_en": "Lycanroc",
+   "slug": "lycanroc-midday"
+  },
+  {
+   "name": "メガジジーロン",
+   "rank": 259,
+   "usage_pct": 0.02,
+   "name_en": "Drampa-Mega",
+   "slug": "drampa-mega"
+  },
+  {
+   "name": "メガケケンカニ",
+   "rank": 260,
+   "usage_pct": 0.02,
+   "name_en": "Crabominable-Mega",
+   "slug": "crabominable-mega"
+  },
+  {
+   "name": "ルカリオ",
+   "rank": 261,
+   "usage_pct": 0.02,
+   "name_en": "Lucario",
+   "slug": "lucario"
+  },
+  {
+   "name": "マフィティフ",
+   "rank": 262,
+   "usage_pct": 0.02,
+   "name_en": "Mabosstiff",
+   "slug": "mabosstiff"
+  },
+  {
+   "name": "イキリンコ",
+   "rank": 263,
+   "usage_pct": 0.02,
+   "name_en": "Squawkabilly",
+   "slug": "squawkabilly-green-plumage"
+  },
+  {
+   "name": "ヘルガー",
+   "rank": 264,
+   "usage_pct": 0.02,
+   "name_en": "Houndoom",
+   "slug": "houndoom"
+  },
+  {
+   "name": "ドラミドロ",
+   "rank": 265,
+   "usage_pct": 0.02,
+   "name_en": "Dragalge",
+   "slug": "dragalge"
+  },
+  {
+   "name": "ヘラクロス",
+   "rank": 266,
+   "usage_pct": 0.02,
+   "name_en": "Heracross",
+   "slug": "heracross"
+  },
+  {
+   "name": "カモネギ",
+   "rank": 267,
+   "usage_pct": 0.02,
+   "name_en": "Farfetch'd",
+   "slug": "farfetchd"
+  },
+  {
+   "name": "オーダイル",
+   "rank": 268,
+   "usage_pct": 0.01,
+   "name_en": "Feraligatr",
+   "slug": "feraligatr"
+  },
+  {
+   "name": "ズルズキン",
+   "rank": 269,
+   "usage_pct": 0.01,
+   "name_en": "Scrafty",
+   "slug": "scrafty"
+  },
+  {
+   "name": "ジジーロン",
+   "rank": 270,
+   "usage_pct": 0.01,
+   "name_en": "Drampa",
+   "slug": "drampa"
+  },
+  {
+   "name": "ムシャーナ",
+   "rank": 271,
+   "usage_pct": 0.01,
+   "name_en": "Musharna",
+   "slug": "musharna"
+  },
+  {
+   "name": "メガニャオニクス（メス）",
+   "rank": 272,
+   "usage_pct": 0.01,
+   "name_en": "Meowstic-F-Mega",
+   "slug": "meowstic-female-mega"
+  },
+  {
+   "name": "シビルドン",
+   "rank": 273,
+   "usage_pct": 0.01,
+   "name_en": "Eelektross",
+   "slug": "eelektross"
+  },
+  {
+   "name": "アマージョ",
+   "rank": 274,
+   "usage_pct": 0.01,
+   "name_en": "Tsareena",
+   "slug": "tsareena"
   }
  ]
 }
