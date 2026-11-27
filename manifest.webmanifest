@@ -1,0 +1,1 @@
+{"background_color":"#101722","description":"ポケモンチャンピオンズ専用の構築支援アプリ（タイプ相性・素早さ・環境分析）","display":"standalone","icons":[{"sizes":"192x192","src":"icon-192.png","type":"image/png"},{"sizes":"512x512","src":"icon-512.png","type":"image/png"}],"lang":"ja","name":"PokéBuild - ポケモンチャンピオンズ構築支援","scope":"./","short_name":"PokéBuild","start_url":"./index.html","theme_color":"#101722"}

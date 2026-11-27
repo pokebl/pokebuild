@@ -1,0 +1,129 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101722"><title>PokéBuild｜ポケモンチャンピオンズ構築支援</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><style>
+*{box-sizing:border-box}body{margin:0;background:#101722;color:#e9eef7;font:14px system-ui,sans-serif}header{background:#182332;padding:22px max(18px,calc((100vw - 1100px)/2));border-bottom:1px solid #344154}header b{font-size:28px;letter-spacing:-1px;color:#79dfc1}main{max-width:1100px;margin:auto;padding:16px}section{background:#192433;border:1px solid #344154;border-radius:14px;padding:16px;margin-bottom:14px}h2{font-size:17px;margin:0 0 12px}button,input,select,textarea{font:inherit;color:inherit;background:#243347;border:1px solid #43536a;border-radius:8px;padding:9px;max-width:100%}button{cursor:pointer;min-height:44px}button:hover{filter:brightness(1.2)}button.on{outline:2px solid #79dfc1;outline-offset:-2px;background:#304c50}button:disabled{opacity:.4}small,.muted{color:#a3b1c4}.row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.between{display:flex;justify-content:space-between;align-items:center;gap:8px}.slots,.types,.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.slots button{min-height:78px}.types button{font-weight:bold;color:white;padding:10px 2px;opacity:.55;min-height:44px}.types button.on{opacity:1;outline:2px solid white;outline-offset:-3px}.chip{display:inline-block;padding:3px 7px;border-radius:5px;color:white;font-size:12px;margin:2px}.stats{grid-template-columns:repeat(4,1fr)}.stat{background:#243347;border-radius:9px;padding:12px}.big{font-size:28px;font-weight:bold}.good{color:#79dfc1}.bad{color:#ff9393}.item{padding:10px 0;border-bottom:1px solid #344154}table{width:100%;border-collapse:collapse;text-align:center}td,th{padding:8px 3px;border-bottom:1px solid #344154}nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}nav button{flex:1;white-space:nowrap}.scroll{overflow:auto;max-height:550px}textarea{width:100%}input[type=range]{flex:1;min-width:140px}.picklist{display:flex;flex-wrap:wrap;gap:6px}.picklist button{min-height:44px}@media(max-width:650px){.slots{grid-template-columns:repeat(3,1fr)}.types{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(2,1fr)}main{padding:10px}section{padding:12px}td,th{font-size:11px}}
+</style></head><body><header><b>PokéBuild</b><div class="muted">ポケモンチャンピオンズ専用 / PARTY BUILDER・タイプ相性・素早さ分析</div></header><main id="app"></main><script>
+const T='ノーマル ほのお みず でんき くさ こおり かくとう どく じめん ひこう エスパー むし いわ ゴースト ドラゴン あく はがね フェアリー'.split(' '), C=['#858585','#c96932','#3186b8','#a58b00','#65951b','#278e9c','#c34c50','#9862a9','#9b8135','#587fbd','#b64eb1','#389644','#b48a20','#695b9d','#d26942','#5965a7','#69788e','#ca5482'], A=T.map((_,i)=>i);
+const S=[[],[4,5,11,16],[1,8,12],[2,9],[2,8,12],[4,8,9,14],[0,5,12,15,16],[4,17],[1,3,7,12,16],[4,6,11],[6,7],[4,10,15],[1,5,9,11],[10,13],[14],[10,13],[5,12,17],[6,14,15]],W=[[12,16],[1,2,12,14],[2,4,14],[3,4,14],[1,4,7,9,11,14,16],[1,2,5,16],[7,9,10,11,17],[7,8,12,13],[4,11],[3,12,16],[10,16],[1,6,7,9,13,16,17],[6,8,16],[15],[16],[6,15,17],[1,2,3,16],[1,7,16]],I=[[13],[],[],[8],[],[],[13],[16],[9],[],[15],[],[],[0],[17],[],[],[]];
+// 内蔵フォールバック（data/pokemon.json が読めない場合でも基本分析を動かすための元データ69匹）
+const FALLBACK=`ガブリアス|14,8|102|さめはだ,すながくれ
+アシレーヌ|2,17|60|げきりゅう,うるおいボイス
+カバルドン|8|47|すなおこし,すなのちから
+ブリジュラス|16,14|85|じきゅうりょく,がんじょう,すじがねいり
+ルカリオ|6,16|90|せいしんりょく,ふくつのこころ,せいぎのこころ
+ミミッキュ|13,17|96|ばけのかわ
+リザードン|1,9|100|もうか,サンパワー
+イダイトウ（オス）|2,13|78|すいすい,てきおうりょく,かたやぶり
+ボーマンダ|14,9|100|いかく,じしんかじょう
+サーフゴー|16,13|84|おうごんのからだ
+マスカーニャ|4,15|123|しんりょく,へんげんじざい
+アーマーガア|9,16|67|ミラーアーマー,プレッシャー,きんちょうかん
+カイリュー|14,9|80|マルチスケイル,せいしんりょく
+ゴリランダー|4|85|グラスメイカー,しんりょく
+メタグロス|16,10|70|クリアボディ,ライトメタル
+セグレイブ|14,5|87|ねつこうかん,アイスボディ
+キラフロル|12,7|86|どくげしょう,ふしょく
+ギャラドス|2,9|81|いかく,じしんかじょう
+エースバーン|1|119|もうか,リベロ
+ブラッキー|15|65|シンクロ,せいしんりょく
+ゲンガー|13,7|110|のろわれボディ
+ヒートロトム|3,1|86|ふゆう
+ウォッシュロトム|3,2|86|ふゆう
+ゲッコウガ|2,15|122|げきりゅう,へんげんじざい,きずなへんげ
+ドドゲザン|15,16|50|そうだいしょう,まけんき,プレッシャー
+バシャーモ|1,6|80|かそく,もうか
+ラグラージ|2,8|60|げきりゅう,しめりけ
+バンギラス|12,15|61|すなおこし,きんちょうかん
+ウルガモス|11,1|100|ほのおのからだ,むしのしらせ
+オオニューラ|6,7|120|かるわざ,プレッシャー,どくしゅ
+アローラキュウコン|5,17|109|ゆきふらし,ゆきがくれ
+ピクシー|17|60|てんねん,マジックガード,メロメロボディ
+サザンドラ|15,14|98|ふゆう
+ドヒドイデ|7,2|35|さいせいりょく,ひとでなし,じゅうなん
+ハッサム|11,16|65|テクニシャン,むしのしらせ,ライトメタル
+ラウドボーン|1,13|66|てんねん,もうか
+ソウブレイズ|1,13|85|もらいび,くだけるよろい
+ペリッパー|2,9|65|あめふらし,するどいめ,あめうけざら
+オーロンゲ|15,17|60|いたずらごころ,おみとおし,わるいてぐせ
+ドリュウズ|8,16|88|かたやぶり,すなかき,すなのちから
+サーナイト|10,17|80|トレース,シンクロ,テレパシー
+ヒスイヌメルゴン|16,14|60|そうしょく,シェルアーマー,ぬめぬめ
+エンペルト|2,16|60|げきりゅう,かちき
+ニンフィア|17|60|フェアリースキン,メロメロボディ
+ドラパルト|14,13|142|すりぬけ,クリアボディ,のろわれボディ
+カビゴン|0|30|あついしぼう,めんえき,くいしんぼう
+マンムー|5,8|80|あついしぼう,どんかん,ゆきがくれ
+エアームド|16,9|70|がんじょう,するどいめ,くだけるよろい
+コノヨザル|6,13|90|まけんき,やるき,せいしんりょく
+エルフーン|4,17|116|いたずらごころ,すりぬけ,ようりょくそ
+マリルリ|2,17|50|ちからもち,そうしょく,あついしぼう
+ガオガエン|1,15|60|いかく,もうか
+シャワーズ|2|65|ちょすい,うるおいボディ
+ミミズズ|16|65|どしょく,すながくれ
+シャンデラ|13,1|80|もらいび,すりぬけ,ほのおのからだ
+グライオン|8,9|95|ポイズンヒール,かいりきバサミ,すながくれ
+シビルドン|3|50|ふゆう
+キョジオーン|12|35|きよめのしお,がんじょう,クリアボディ
+サンダース|3|130|ちくでん,はやあし
+ヤバソチャ|4,13|70|たいねつ,おもてなし
+ヌメルゴン|14|80|そうしょく,うるおいボディ,ぬめぬめ
+デカヌチャン|17,16|94|かたやぶり,マイペース,わるいてぐせ
+メガリザードンX|1,14|100|かたいツメ
+メガリザードンY|1,9|100|ひでり
+メガルカリオ|6,16|112|てきおうりょく
+メガギャラドス|2,15|81|かたやぶり
+メガボーマンダ|14,9|120|スカイスキン
+メガメタグロス|16,10|110|かたいツメ
+メガゲンガー|13,7|130|かげふみ`.split('\n').map((l,id)=>{let[n,t,s,a]=l.split('|');return{id,n,t:t.split(',').map(Number),s:+s,a:a.split(','),stats:null,reg:'base',slug:''}});
+let db=FALLBACK.slice(), dbLoaded=false;
+const imm={'ふゆう':8,'もらいび':1,'こんがりボディ':1,'ちょすい':2,'よびみず':2,'かんそうはだ':2,'ちくでん':3,'ひらいしん':3,'でんきエンジン':3,'そうしょく':4,'どしょく':8}, abilities=['なし',...Object.keys(imm),'あついしぼう','たいねつ','すいほう','きよめのしお','ふしぎなまもり'];
+const mul=(a,t)=>t.reduce((v,d)=>v*(I[a].includes(d)?0:S[a].includes(d)?2:W[a].includes(d)?.5:1),1), def=(a,p)=>{let v=mul(a,p.t),b=p.b;if(imm[b]===a)return 0;if(b==='あついしぼう'&&[1,5].includes(a)||['たいねつ','すいほう'].includes(b)&&a===1||b==='きよめのしお'&&a===13)v*=.5;if(b==='かんそうはだ'&&a===1)v*=1.25;if(b==='ふしぎなまもり'&&v<=1)v=0;return v};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])), chip=i=>`<span class="chip" style="background:${C[i]}">${T[i]}</span>`, chips=t=>t.map(chip).join(''), manual=t=>({t,n:'',s:null,stats:null,b:'なし',a:abilities,m:2,k:1,sp:null,nat:1}), make=(p,b=p.a[0])=>({...p,b,m:2,k:1,sp:null,nat:1}), fresh=()=>({team:Array(6).fill(null),extra:[],off:[],name:'マイパーティ'});
+let st=fresh(),slot=0,mode=0,tab=0,sm=2,boost={},custom=[],saved={},target='',ownKey='',q='',pickTypes=[],mcOnly=false,envN=30,swapSlot=0,usageFetched=null,usageManual=null;
+try{saved=JSON.parse(localStorage.getItem('pokebuild-saves')||'{}');st=JSON.parse(localStorage.getItem('pokebuild-current')||'null')||st;usageManual=JSON.parse(localStorage.getItem('pokebuild-usage-manual')||'null')}catch{}
+const usage=()=>usageManual||usageFetched, usageEntries=()=>(usage()?.entries||[]), usageRank=n=>{let e=usageEntries().find(x=>x.name===n);return e?e.rank:null}, byName=n=>db.find(p=>p.n===n), envList=n=>usageEntries().slice(0,n).map(e=>{let p=byName(e.name);return p?{...make(p),rank:e.rank,pct:e.usage_pct}:null}).filter(Boolean);
+const r=()=>st.team.filter(Boolean), atk=()=>[...new Set([...r().flatMap(p=>p.t).filter(i=>!st.off.includes(i)),...st.extra])],best=i=>r().length?Math.min(...r().map(p=>def(i,p))):Infinity, hit=p=>Math.max(0,...atk().map(i=>def(i,p))), fmt=v=>v===Infinity?'—':v, btn=(n,a,i,on=false)=>`<button data-a="${a}" data-i="${i}" class="${on?'on':''}">${n}</button>`, types=(sel,a)=>`<div class="types">${A.map(i=>`<button style="background:${C[i]}" data-a="${a}" data-i="${i}" class="${sel.includes(i)?'on':''}">${T[i]}</button>`).join('')}</div>`;
+// チャンピオンズ式: Lv50固定・個体値31固定・SP(0-32)。他能力: floor((種族値+20+SP)×性格補正)
+const presetSP=m=>m===0?0:32, presetNat=m=>m===2?1.1:1, effSP=p=>p.sp!=null?p.sp:presetSP(p.m??sm), effNat=p=>p.sp!=null?(p.nat??1):presetNat(p.m??sm), baseOf=p=>Math.floor((p.s+20+effSP(p))*effNat(p)), speed=p=>Math.floor(baseOf(p)*(p.k??1));
+const neededSP=(baseS,targetVal,nat)=>{for(let sp=0;sp<=32;sp++)if(Math.floor((baseS+20+sp)*nat)>targetVal)return sp;return null};
+function detailExtra(p){if(!p)return'';let h='';if(p.stats)h+=`<div class="item"><small>種族値（任意表示）</small><br>H${p.stats.h} A${p.stats.a} B${p.stats.b} C${p.stats.c} D${p.stats.d} S${p.stats.s} 合計${p.stats.h+p.stats.a+p.stats.b+p.stats.c+p.stats.d+p.stats.s}</div>`;else if(p.s!=null)h+=`<div class="item"><small>種族値</small> S${p.s}（全種族値は未収録データのため非表示）</div>`;if(p.s!=null){h+=`<div class="item"><b>素早さ調整（任意）</b><div class="row">${['無振り','準速','最速'].map((n,i)=>`<button data-a="preset" data-i="${i}" class="${p.sp==null&&(p.m??2)===i?'on':''}">${n}</button>`).join('')}</div><div class="row"><span>SP</span><input type="range" id="spslider" min="0" max="32" step="1" value="${effSP(p)}"><b>${effSP(p)}</b><span>実数値 ${baseOf(p)}</span></div><div class="row"><span>性格補正</span>${[[0.9,'↓0.9'],[1,'―1.0'],[1.1,'↑1.1']].map(([v,n])=>`<button data-a="nat" data-v="${v}" class="${effNat(p)===v?'on':''}">${n}</button>`).join('')}</div><small>SPを触るとプリセットから独立した任意調整になります。合計66制限は各ポケモンの素早さのみ扱うため本画面では検証しません。</small></div>`}return h}
+function pickersHTML(){let list=db.filter(p=>(!mcOnly||p.reg==='mc_listed')&&pickTypes.every(t=>p.t.includes(t)));let top=envList(30);return `<div class="item"><b>タイプで選ぶ</b> ${btn(mcOnly?'M-Cリスト掲載のみ：ON':'M-Cリスト掲載のみ：OFF','mctoggle',0,mcOnly)}${types(pickTypes,'ptype')}<div class="picklist" id="picklist">${list.slice(0,30).map(p=>btn(esc(p.n)+' '+chips(p.t),'pick',p.id)).join('')||'該当なし'}</div><small>${list.length}件中 最大30件表示</small></div><div class="item"><b>使用率上位から選ぶ（シングル）</b><div class="picklist">${top.map(p=>btn(`#${p.rank} `+esc(p.n),'pick',p.id)).join('')||'使用率データ未取得'}</div></div>`}
+function render(){let p=st.team[slot],a=atk(),miss=A.filter(i=>!a.some(t=>mul(t,[i])>1)),un=A.filter(i=>best(i)>=1),bad=A.filter(i=>r().length&&best(i)>1),env=envList(Math.min(envN,100));try{localStorage.setItem('pokebuild-current',JSON.stringify(st))}catch{};app.innerHTML=`<section><div class="between"><h2>パーティ ${r().length}/6</h2>${btn('リセット','reset',0)}</div><div class="row">${btn('⚡ 簡易入力','mode',0,!mode)}${btn('詳細入力','mode',1,mode)}</div><br><div class="slots">${st.team.map((p,i)=>btn(`<small>No.${i+1}</small><div>${p?(mode?esc(p.n):'')+'<div>'+chips(p.t)+'</div>':'＋ 選択'}</div>`,'slot',i,i===slot)).join('')}</div><div class="between item"><b>No.${slot+1} のタイプ</b>${btn('解除','remove',0)}</div>${mode?`<input id="search" placeholder="ポケモン名で検索（任意）" value="${esc(q)}"><div id="results"></div>${pickersHTML()}`:''}${types(p?.t||[],'type')}<div class="row">${btn('次の枠 →','next',0)}${p?`<select id="ability">${[...new Set(['なし',...p.a,p.b])].map(b=>`<option ${b===p.b?'selected':''}>${esc(b)}</option>`).join('')}</select><small>特性（任意）</small>`:''}</div>${mode?detailExtra(p):''}</section><section><h2>攻撃技タイプ</h2><small>一致タイプを自動反映。タップで追加・解除（サブウェポンはタイプ提案ベースで、習得可否は未照合です）。</small>${types(a,'attack')}${btn('一致技に戻す','auto',0)}</section><section><div class="stats">${[['攻撃範囲',18-miss.length+'/18'],['耐性範囲',18-un.length+'/18'],['環境上位に抜群',env.length?env.filter(p=>hit(p)>1).length+'/'+env.length:'未取得'],['全員が弱点',bad.length]].map(([n,v])=>`<div class="stat"><small>${n}</small><div class="big">${v}</div></div>`).join('')}</div><div class="item">攻撃不足：${chips(miss)||'なし'}</div><div class="item">半減以下なし：${chips(un)||'なし'}</div><div>抜群の一貫：${r().length?chips(bad)||'なし':'未設定'}</div></section><nav>${['攻撃','防御','環境対策','素早さ','補完候補','保存'].map((n,i)=>btn(n,'tab',i,tab===i)).join('')}</nav><section id="detail"></section><small>${dbLoaded?'ポケモンデータ：data/pokemon.json（PokeAPI由来）':'ポケモンデータ：内蔵フォールバック69匹（pokemon.json未読込でも基本分析は利用可）'}。実際の使用可否や習得技は未照合の項目があります。条件付き特性や技固有の相性例外は対象外。</small>`;if(mode)results();let d=document.getElementById('detail');
+if(tab===0){let gaps=[];for(let i=0;i<18;i++)for(let j=i+1;j<18;j++)if(!a.some(t=>mul(t,[i,j])>1))gaps.push([i,j]);d.innerHTML=`<h2>攻撃相性</h2><div class="row">${A.map(i=>`<div>${chip(i)} <b class="${miss.includes(i)?'bad':'good'}">${a.length?Math.max(...a.map(t=>mul(t,[i]))):'—'}</b></div>`).join('')}</div><p>複合タイプへの抜群：${153-gaps.length}/153（理論上の全組合せ）</p><details><summary>抜群を取れない組合せ</summary>${gaps.map(t=>`<div>${chips(t)}</div>`).join('')}</details>`}
+if(tab===1)d.innerHTML=`<h2>防御相性</h2><div class="scroll"><table><tr><th>攻撃技</th>${st.team.map((_,i)=>`<th>${i+1}</th>`).join('')}<th>最良</th></tr>${A.map(i=>`<tr><td>${chip(i)}</td>${st.team.map(p=>{let v=p?def(i,p):Infinity;return `<td class="${v<1?'good':v>1&&v!==Infinity?'bad':''}">${fmt(v)}</td>`}).join('')}<td>${fmt(best(i))}</td></tr>`).join('')}</table></div>`;
+if(tab===2){let u=usage();d.innerHTML=`<h2>環境対策（シングル使用率）</h2>${u?`<div class="item"><small>取得元：${esc(usageManual?'手動インポート':u.source)}<br>集計期間：${esc(u.period||'不明')}／レギュレーション：${esc(u.regulation||'不明')}／シーズン：${esc(u.season||'不明')}<br>最終更新：${esc(u.updated_at||'不明')}／形式：シングル（ダブルのデータは使用していません）<br>${usageEntries().some(e=>e.usage_pct==null)?'※使用率%は順位のみ公開・%は未取得のため、順位のみ表示しています。':''}${u.source_url?`<br>出典URL：${esc(u.source_url)}`:''}</small></div>`:`<div class="item">使用率データは現在取得できていません。下の手動インポートから取り込めます（基本分析は引き続き利用できます）。</div>`}<div class="row">表示件数 ${[10,30,50,100].map(n=>btn('上位'+n,'envn',n,envN===n)).join('')}</div>${env.map(p=>`<div class="item"><div class="between"><b>#${p.rank} ${esc(p.n)} ${chips(p.t)}</b><b class="${hit(p)>1?'good':'bad'}">${hit(p)>1?'抜群 ×'+hit(p):'抜群なし'}</b></div>有効技：${chips(a.filter(i=>def(i,p)>1))||'なし'}<br><small>一致技を全て半減以下：${st.team.map((q,i)=>q&&p.t.every(t=>def(t,q)<1)?'No.'+(i+1):null).filter(Boolean).join('、')||'なし'}</small></div>`).join('')||'<p>表示できる環境ポケモンがありません。</p>'}<details><summary>使用率データの手動インポート</summary><p><small>CSV（1行ごとに「名前,順位,使用率%」。%は空欄可）または usage.json と同じ形式のJSONを貼り付けてください。取り込むと自動取得データより優先表示され、出典は「手動インポート」になります。</small></p><textarea id="usageimport" rows="6" placeholder="ガブリアス,1,&#10;アシレーヌ,2,"></textarea><div class="row">${btn('インポート','usageimp',0)}${usageManual?btn('手動データを削除','usagedel',0):''}</div><p id="umsg"></p></details>`}
+if(tab===3){let env30=envList(30),envKeys=new Set(env30.map(p=>'e'+p.rank));let rows=[...st.team.map((p,i)=>p&&p.s!=null?{...p,key:'t'+i,n:p.n||'No.'+(i+1),own:true}:null).filter(Boolean),...custom.map((p,i)=>({...p,key:'c'+i,own:true})),...env30.map(p=>({...p,key:'e'+p.rank,m:sm,k:boost['e'+p.rank]||1,env:true})),...db.filter(p=>!env30.some(e=>e.id===p.id)).map(p=>({...p,key:'d'+p.id,m:sm,k:boost[p.id]||1}))].sort((a,b)=>speed(b)-speed(a));let t=rows.find(p=>p.key===target),own=rows.find(p=>p.key===ownKey);let need='';if(t){need=`<p>基準「${esc(t.n)}」の実数値：<b>${speed(t)}</b>／抜くために必要な実数値：<b>${speed(t)+1}</b></p>`;if(own&&own.s!=null){let n1=neededSP(own.s,speed(t),1),n2=neededSP(own.s,speed(t),1.1);need+=`<p>自分の「${esc(own.n)}」（S種族値${own.s}）が必要なSP：性格補正なし＝<b>${n1===null?'SP32でも抜けません':n1}</b>／補正あり(1.1)＝<b>${n2===null?'SP32でも抜けません':n2}</b></p>`}}d.innerHTML=`<h2>素早さライン（チャンピオンズ式・Lv.50相当）</h2><div class="row">相手・環境の設定 ${['無振り','準速','最速'].map((n,i)=>btn(n,'sm',i,sm===i)).join('')}</div><div class="row item"><input id="custom" type="number" min="1" max="255" placeholder="S種族値" style="width:120px">${btn('比較に追加','custom',0)}${btn('追加分を解除','clearcustom',0)}</div><div class="row"><select id="target"><option value="">比較基準（相手）を選択</option>${rows.map(p=>`<option value="${p.key}" ${target===p.key?'selected':''}>${esc(p.n)}：${speed(p)}</option>`).join('')}</select><select id="ownsel"><option value="">自分のポケモンを選択（必要SP計算用）</option>${rows.filter(p=>p.own).map(p=>`<option value="${p.key}" ${ownKey===p.key?'selected':''}>${esc(p.n)}</option>`).join('')}</select></div>${need}<div class="scroll"><table><tr><th>ポケモン</th><th>通常</th><th>1.5倍</th><th>2倍</th><th>現在値・設定</th></tr>${rows.map(p=>`<tr><td class="${p.own?'good':''}">${p.env?'環境#'+p.rank+' ':''}${esc(p.n)}${p.own?`<div>${['無振り','準速','最速'].map((n,i)=>`<button data-a="pm" data-key="${p.key}" data-i="${i}" class="${(p.sp==null?(p.m??sm):-1)===i?'on':''}">${n}</button>`).join('')}</div>`:''}</td>${[1,1.5,2].map(k=>`<td>${Math.floor(baseOf({...p,m:p.m??sm,sp:p.own?p.sp:null,nat:p.own?p.nat:undefined??1})*k)}</td>`).join('')}<td><b>${speed(p)}</b> ${t?(speed(p)>speed(t)?'先手':speed(p)<speed(t)?'後手':'同速'):''}<div>${[1,1.5,2].map(k=>`<button data-a="pk" data-key="${p.key}" data-i="${k}" class="${p.k===k?'on':''}">×${k}</button>`).join('')}</div></td></tr>`).join('')}</table></div><small>1.5倍＝スカーフ・S+1、2倍＝S+2等。小数点以下切り捨て。倍率の重複なし。自分のポケモンの任意SPは詳細入力で設定できます（表の通常/1.5倍/2倍はプリセット基準で表示）。</small>`}
+if(tab===4){let combos=[];for(let i=0;i<18;i++)for(let j=i;j<18;j++)combos.push(manual(i===j?[i]:[i,j]));let score=p=>{let dg=un.filter(i=>def(i,p)<1),ag=miss.filter(i=>p.t.some(t=>mul(t,[i])>1)),fix=bad.filter(i=>def(i,p)<=1),rk=usageRank(p.n),bonus=rk?(rk<=10?5:rk<=30?3:rk<=50?1:0):0;return{p,dg,ag,fix,rk,v:dg.length*3+ag.length*2+fix.length*2+bonus}};let rankF=ps=>ps.map(score).filter(x=>x.v>0).sort((a,b)=>b.v-a.v);let full=r().length===6;let improve=x=>`改善点：耐性補完 ${x.dg.length}件（${x.dg.map(i=>T[i]).join('・')||'なし'}）／攻撃補完 ${x.ag.length}件（${x.ag.map(i=>T[i]).join('・')||'なし'}）／弱点の一貫解消 ${x.fix.length}件${x.rk?`／環境使用率 #${x.rk}`:''}`;let show=(x,act,i)=>`<div class="item"><div class="between"><b>${esc(x.p.n)} ${chips(x.p.t)}</b>${full&&act==='addpk'?`<button data-a="swap" data-i="${i}" data-b="${esc(x.p.b)}">No.${swapSlot+1}と入れ替え</button>`:`<button data-a="${act}" data-i="${i}" data-t="${x.p.t.join(',')}" data-b="${esc(x.p.b)}" ${full?'disabled':''}>追加</button>`}</div><small>${esc(x.p.b)}　${improve(x)}</small><div>耐性補完：${chips(x.dg)||'なし'}</div></div>`;let rec=rankF(db.filter(p=>p.reg==='mc_listed'&&!r().some(q=>q.id===p.id)).flatMap(p=>p.a.map(b=>make(p,b))));let seen=new Set();d.innerHTML=`<h2>おすすめタイプ</h2>${rankF(combos).slice(0,5).map(x=>show(x,'addtype',0)).join('')||'補完不要'}<h2>おすすめサブウェポン</h2><small>※サブウェポンは「タイプ」の提案です。そのポケモンが実際にそのタイプの技を習得できるかは未照合のため、実戦投入前にゲーム内でご確認ください。</small>${A.filter(i=>!a.includes(i)).map(i=>({i,g:miss.filter(t=>mul(i,[t])>1)})).filter(x=>x.g.length).sort((a,b)=>b.g.length-a.g.length).slice(0,5).map(x=>`<div class="item between">${chip(x.i)} ${chips(x.g)}（攻撃不足 ${x.g.length}件を解消） ${btn('追加','attack',x.i)}</div>`).join('')||'補完不要'}<h2>おすすめポケモン（M-Cリスト掲載のみ）</h2>${full?`<div class="row">入れ替え対象：${st.team.map((p,i)=>btn('No.'+(i+1)+' '+(p?esc(p.n||'タイプのみ'):''),'swapslot',i,swapSlot===i)).join('')}</div><small>6匹登録済みのため「入れ替え候補」として提案します。入れ替えは確認後に実行されます。</small>`:''}${rec.filter(x=>!seen.has(x.p.id)&&seen.add(x.p.id)).slice(0,10).map(x=>show(x,'addpk',x.p.id)).join('')||'補完不要'}`}
+if(tab===5)d.innerHTML=`<h2>保存・読み込み</h2><div class="row"><input id="name" value="${esc(st.name)}">${btn('保存','save',0)}</div>${Object.keys(saved).map((n,i)=>`<div class="item between">${esc(n)}<div>${btn('読込','load',i)} ${btn('削除','del',i)}</div></div>`).join('')}<p>構築コード（別端末への移行用）</p><textarea id="code" rows="5">${esc(JSON.stringify(st))}</textarea><div class="row">${btn('コピー','copy',0)}${btn('コードから読込','import',0)}</div><p id="msg"></p>`;}
+function results(){let e=document.getElementById('results');if(!e)return;let norm=s=>s.replace(/[ぁ-ゖ]/g,c=>String.fromCharCode(c.charCodeAt(0)+96));e.innerHTML='<div class="picklist">'+((q?db.filter(p=>norm(p.n).includes(norm(q))):db.slice(0,6)).slice(0,20).map(p=>btn(esc(p.n)+' '+chips(p.t),'pick',p.id)).join(' ')||'未登録')+'</div>'}
+const app=document.getElementById('app');
+app.addEventListener('input',e=>{if(e.target.id==='search'){q=e.target.value;results()}if(e.target.id==='spslider'){let p=st.team[slot];if(p){if(p.sp==null){p.nat=effNat(p)}p.sp=+e.target.value;render()}}});
+app.addEventListener('change',e=>{if(e.target.id==='ability'){st.team[slot].b=e.target.value;render()}if(e.target.id==='target'){target=e.target.value;render()}if(e.target.id==='ownsel'){ownKey=e.target.value;render()}});
+app.addEventListener('click',e=>{let b=e.target.closest('button[data-a]');if(!b)return;let i=+b.dataset.i,k=b.dataset.key;switch(b.dataset.a){
+case'mode':mode=i;break;case'slot':slot=i;q='';break;case'next':slot=(slot+1)%6;q='';break;case'remove':st.team[slot]=null;break;
+case'reset':if(!confirm('現在の構築をリセットしますか？'))return;st=fresh();slot=0;break;
+case'type':{let t=st.team[slot]?.t.slice()||[];if(t.includes(i))t=t.filter(x=>x!==i);else if(t.length<2)t.push(i);else return;st.team[slot]=t.length?manual(t):null;break}
+case'ptype':if(pickTypes.includes(i))pickTypes=pickTypes.filter(x=>x!==i);else if(pickTypes.length<2)pickTypes.push(i);else return;break;
+case'mctoggle':mcOnly=!mcOnly;break;
+case'pick':{let src=db.find(p=>p.id===i);if(src)st.team[slot]=make(src);q='';break}
+case'preset':{let p=st.team[slot];if(p){p.m=i;p.sp=null;p.nat=1}break}
+case'nat':{let p=st.team[slot];if(p){if(p.sp==null)p.sp=effSP(p);p.nat=+b.dataset.v}break}
+case'attack':if(atk().includes(i)){st.extra=st.extra.filter(x=>x!==i);st.off=[...new Set([...st.off,i])]}else{st.off=st.off.filter(x=>x!==i);st.extra=[...new Set([...st.extra,i])]}break;
+case'auto':st.extra=[];st.off=[];break;case'tab':tab=i;break;case'envn':envN=i;break;case'swapslot':swapSlot=i;break;case'sm':sm=i;break;
+case'custom':{let s=+document.getElementById('custom').value;if(Number.isInteger(s)&&s>=1&&s<=255)custom.push({n:'S'+s+'族',s,m:2,k:1,sp:null,nat:1});break}
+case'clearcustom':custom=[];target='';ownKey='';break;
+case'pm':case'pk':{let p=k[0]==='t'?st.team[+k.slice(1)]:k[0]==='c'?custom[+k.slice(1)]:null;if(p){if(b.dataset.a==='pm'){p.m=i;p.sp=null}else p.k=i}else if(k[0]==='d')boost[+k.slice(1)]=i;else if(k[0]==='e')boost[k]=i;break}
+case'addtype':case'addpk':{let j=st.team.indexOf(null);if(j>=0){let src=db.find(p=>p.id===i);st.team[j]=b.dataset.a==='addtype'?manual(b.dataset.t.split(',').map(Number)):(src?make(src,b.dataset.b):null);slot=j}break}
+case'swap':{let src=db.find(p=>p.id===i);if(src&&confirm(`No.${swapSlot+1}「${st.team[swapSlot]?.n||'タイプのみ'}」と「${src.n}」を入れ替えますか？`)){st.team[swapSlot]=make(src,b.dataset.b);slot=swapSlot}break}
+case'usageimp':{try{let txt=document.getElementById('usageimport').value.trim();if(!txt)throw Error('empty');let doc;if(txt.startsWith('{')||txt.startsWith('[')){let j=JSON.parse(txt);doc=Array.isArray(j)?{entries:j}:j;if(!Array.isArray(doc.entries))throw Error('fmt')}else{let entries=txt.split('\n').map(l=>l.split(',').map(s=>s.trim())).filter(c=>c.length>=2&&c[0]&&!/名前|name/i.test(c[0])).map(c=>({name:c[0],rank:+c[1]||0,usage_pct:c[2]?+c[2]:null}));entries.sort((x,y)=>x.rank-y.rank);doc={entries}}doc.format='singles';doc.source='手動インポート';usageManual=doc;try{localStorage.setItem('pokebuild-usage-manual',JSON.stringify(doc))}catch{}document.getElementById('umsg').textContent='取り込みました（'+doc.entries.length+'件）';setTimeout(render,600);return}catch{document.getElementById('umsg').textContent='形式が正しくありません。CSV（名前,順位,使用率%）またはJSONで貼り付けてください。';return}}
+case'usagedel':usageManual=null;try{localStorage.removeItem('pokebuild-usage-manual')}catch{}break;
+case'save':{st.name=document.getElementById('name').value.trim()||'マイパーティ';saved[st.name]=JSON.parse(JSON.stringify(st));try{localStorage.setItem('pokebuild-saves',JSON.stringify(saved))}catch{alert('端末保存不可。構築コードを保管してください。')}break}
+case'load':st=JSON.parse(JSON.stringify(saved[Object.keys(saved)[i]]));slot=0;break;
+case'del':delete saved[Object.keys(saved)[i]];try{localStorage.setItem('pokebuild-saves',JSON.stringify(saved))}catch{}break;
+case'copy':{let f=document.getElementById('code');f.select();try{document.execCommand('copy')}catch{}document.getElementById('msg').textContent='コードを選択しました。必要に応じて手動コピーしてください。';return}
+case'import':try{let s=JSON.parse(document.getElementById('code').value);if(!Array.isArray(s.team)||s.team.length!==6||!s.team.every(p=>p===null||Array.isArray(p.t)&&p.t.length>=1&&p.t.length<=2&&p.t.every(i=>A.includes(i))&&Array.isArray(p.a)&&typeof p.n==='string'&&typeof p.b==='string'&&(p.s===null||Number.isFinite(p.s)))||!Array.isArray(s.extra)||!Array.isArray(s.off)||![...s.extra,...s.off].every(i=>A.includes(i)))throw Error();st=s;slot=0}catch{document.getElementById('msg').textContent='無効な構築コード';return}break;
+}render()});
+render();
+// 外部データ読込（失敗しても内蔵フォールバックで動作を継続）
+fetch('data/pokemon.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(j=>{if(Array.isArray(j.pokemon)&&j.pokemon.length){db=j.pokemon.map((p,i)=>({...p,id:i}));dbLoaded=true;render()}}).catch(()=>{});
+fetch('data/usage.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(j=>{if(j&&Array.isArray(j.entries)){usageFetched=j;render()}}).catch(()=>{});
+if('serviceWorker' in navigator){try{navigator.serviceWorker.register('sw.js')}catch{}}
+</script></body></html>
