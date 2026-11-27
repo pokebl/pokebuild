@@ -1,0 +1,397 @@
+{
+ "format": "singles",
+ "regulation": "M-C",
+ "season": "M-8",
+ "source": "GameWith 使用率ランキング（順位のみ転記）",
+ "source_url": "https://gamewith.jp/pokemon-champions/555373",
+ "period": "シーズンM-8（集計日 2026-11-13）",
+ "updated_at": "2026-11-13",
+ "note": "使用率%は出典で非公開のため null。数値の推測・補完は行っていない。ダブル(VGC)のデータは一切含まない。",
+ "entries": [
+  {
+   "name": "ガブリアス",
+   "rank": 1,
+   "usage_pct": null
+  },
+  {
+   "name": "アシレーヌ",
+   "rank": 2,
+   "usage_pct": null
+  },
+  {
+   "name": "カバルドン",
+   "rank": 3,
+   "usage_pct": null
+  },
+  {
+   "name": "ブリジュラス",
+   "rank": 4,
+   "usage_pct": null
+  },
+  {
+   "name": "ルカリオ",
+   "rank": 5,
+   "usage_pct": null
+  },
+  {
+   "name": "ミミッキュ",
+   "rank": 6,
+   "usage_pct": null
+  },
+  {
+   "name": "グソクムシャ",
+   "rank": 7,
+   "usage_pct": null
+  },
+  {
+   "name": "リザードン",
+   "rank": 8,
+   "usage_pct": null
+  },
+  {
+   "name": "イダイトウ（オス）",
+   "rank": 9,
+   "usage_pct": null
+  },
+  {
+   "name": "ボーマンダ",
+   "rank": 10,
+   "usage_pct": null
+  },
+  {
+   "name": "サーフゴー",
+   "rank": 11,
+   "usage_pct": null
+  },
+  {
+   "name": "マスカーニャ",
+   "rank": 12,
+   "usage_pct": null
+  },
+  {
+   "name": "アーマーガア",
+   "rank": 13,
+   "usage_pct": null
+  },
+  {
+   "name": "カイリュー",
+   "rank": 14,
+   "usage_pct": null
+  },
+  {
+   "name": "ゴリランダー",
+   "rank": 15,
+   "usage_pct": null
+  },
+  {
+   "name": "メタグロス",
+   "rank": 16,
+   "usage_pct": null
+  },
+  {
+   "name": "イエッサン（オス）",
+   "rank": 17,
+   "usage_pct": null
+  },
+  {
+   "name": "セグレイブ",
+   "rank": 18,
+   "usage_pct": null
+  },
+  {
+   "name": "キラフロル",
+   "rank": 19,
+   "usage_pct": null
+  },
+  {
+   "name": "ギャラドス",
+   "rank": 20,
+   "usage_pct": null
+  },
+  {
+   "name": "エースバーン",
+   "rank": 21,
+   "usage_pct": null
+  },
+  {
+   "name": "ブラッキー",
+   "rank": 22,
+   "usage_pct": null
+  },
+  {
+   "name": "ゲンガー",
+   "rank": 23,
+   "usage_pct": null
+  },
+  {
+   "name": "ヒートロトム",
+   "rank": 24,
+   "usage_pct": null
+  },
+  {
+   "name": "ゲッコウガ",
+   "rank": 25,
+   "usage_pct": null
+  },
+  {
+   "name": "ウォッシュロトム",
+   "rank": 26,
+   "usage_pct": null
+  },
+  {
+   "name": "ドドゲザン",
+   "rank": 27,
+   "usage_pct": null
+  },
+  {
+   "name": "バシャーモ",
+   "rank": 28,
+   "usage_pct": null
+  },
+  {
+   "name": "ライチュウ",
+   "rank": 29,
+   "usage_pct": null
+  },
+  {
+   "name": "フラエッテ（えいえんのはな）",
+   "rank": 30,
+   "usage_pct": null
+  },
+  {
+   "name": "ラグラージ",
+   "rank": 31,
+   "usage_pct": null
+  },
+  {
+   "name": "パーモット",
+   "rank": 32,
+   "usage_pct": null
+  },
+  {
+   "name": "バンギラス",
+   "rank": 33,
+   "usage_pct": null
+  },
+  {
+   "name": "ウルガモス",
+   "rank": 34,
+   "usage_pct": null
+  },
+  {
+   "name": "ギルガルド",
+   "rank": 35,
+   "usage_pct": null
+  },
+  {
+   "name": "オオニューラ",
+   "rank": 36,
+   "usage_pct": null
+  },
+  {
+   "name": "アローラキュウコン",
+   "rank": 37,
+   "usage_pct": null
+  },
+  {
+   "name": "ピクシー",
+   "rank": 38,
+   "usage_pct": null
+  },
+  {
+   "name": "ヒスイダイケンキ",
+   "rank": 39,
+   "usage_pct": null
+  },
+  {
+   "name": "サザンドラ",
+   "rank": 40,
+   "usage_pct": null
+  },
+  {
+   "name": "ドヒドイデ",
+   "rank": 41,
+   "usage_pct": null
+  },
+  {
+   "name": "カメックス",
+   "rank": 42,
+   "usage_pct": null
+  },
+  {
+   "name": "ハッサム",
+   "rank": 43,
+   "usage_pct": null
+  },
+  {
+   "name": "ムクホーク",
+   "rank": 44,
+   "usage_pct": null
+  },
+  {
+   "name": "ガラルヤドキング",
+   "rank": 45,
+   "usage_pct": null
+  },
+  {
+   "name": "ラウドボーン",
+   "rank": 46,
+   "usage_pct": null
+  },
+  {
+   "name": "スターミー",
+   "rank": 47,
+   "usage_pct": null
+  },
+  {
+   "name": "ソウブレイズ",
+   "rank": 48,
+   "usage_pct": null
+  },
+  {
+   "name": "スコヴィラン",
+   "rank": 49,
+   "usage_pct": null
+  },
+  {
+   "name": "マフォクシー",
+   "rank": 50,
+   "usage_pct": null
+  },
+  {
+   "name": "ペリッパー",
+   "rank": 51,
+   "usage_pct": null
+  },
+  {
+   "name": "オーロンゲ",
+   "rank": 52,
+   "usage_pct": null
+  },
+  {
+   "name": "フシギバナ",
+   "rank": 53,
+   "usage_pct": null
+  },
+  {
+   "name": "ドリュウズ",
+   "rank": 54,
+   "usage_pct": null
+  },
+  {
+   "name": "サーナイト",
+   "rank": 55,
+   "usage_pct": null
+  },
+  {
+   "name": "ヒスイヌメルゴン",
+   "rank": 56,
+   "usage_pct": null
+  },
+  {
+   "name": "ブリムオン",
+   "rank": 57,
+   "usage_pct": null
+  },
+  {
+   "name": "クチート",
+   "rank": 58,
+   "usage_pct": null
+  },
+  {
+   "name": "エンペルト",
+   "rank": 59,
+   "usage_pct": null
+  },
+  {
+   "name": "メガニウム",
+   "rank": 60,
+   "usage_pct": null
+  },
+  {
+   "name": "ニンフィア",
+   "rank": 61,
+   "usage_pct": null
+  },
+  {
+   "name": "メタモン",
+   "rank": 62,
+   "usage_pct": null
+  },
+  {
+   "name": "バイバニラ",
+   "rank": 63,
+   "usage_pct": null
+  },
+  {
+   "name": "ドラパルト",
+   "rank": 64,
+   "usage_pct": null
+  },
+  {
+   "name": "ジュペッタ",
+   "rank": 65,
+   "usage_pct": null
+  },
+  {
+   "name": "カビゴン",
+   "rank": 66,
+   "usage_pct": null
+  },
+  {
+   "name": "ハラバリー",
+   "rank": 67,
+   "usage_pct": null
+  },
+  {
+   "name": "ミミロップ",
+   "rank": 68,
+   "usage_pct": null
+  },
+  {
+   "name": "バサギリ",
+   "rank": 69,
+   "usage_pct": null
+  },
+  {
+   "name": "ヒスイゾロアーク",
+   "rank": 70,
+   "usage_pct": null
+  },
+  {
+   "name": "クエスパトラ",
+   "rank": 71,
+   "usage_pct": null
+  },
+  {
+   "name": "マンムー",
+   "rank": 72,
+   "usage_pct": null
+  },
+  {
+   "name": "ミロカロス",
+   "rank": 73,
+   "usage_pct": null
+  },
+  {
+   "name": "アブソル",
+   "rank": 74,
+   "usage_pct": null
+  },
+  {
+   "name": "エアームド",
+   "rank": 75,
+   "usage_pct": null
+  },
+  {
+   "name": "エルレイド",
+   "rank": 76,
+   "usage_pct": null
+  },
+  {
+   "name": "ニョロトノ",
+   "rank": 77,
+   "usage_pct": null
+  }
+ ]
+}
